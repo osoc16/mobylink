@@ -1,10 +1,9 @@
 # Moby Link
 
-Contents:
+This `gh-pages` is both a intro to the project, as a Jekyll method to create URIs for unique identifiers in a dataset.
 
-* research considering different datasources
-* code to convert from datex to linked datex
-* `gh-pages`: a intro to the project and a url scheme for each dataset
+* [intro](https://osoc16.github.io/mobylink)
+* [verkeercentrum](https://osoc16.github.io/mobylink/verkeercentrum)
 
 # License
 

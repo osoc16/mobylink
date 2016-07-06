@@ -1,0 +1,18 @@
+language: node_js
+node_js: 6
+sudo: false
+branches:
+  only:
+    - gh-pages
+git:
+  depth: 3
+env:
+  global:
+script:
+  - "npm run parking"
+after_success:
+  - git config --global push.default simple
+  - git config user.name "oSoc bot"
+  - git config user.email "hello+bot@haroen.me"
+  - git commit -am "update parkings"
+  - git push https://${GH_OAUTH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} HEAD:gh-pages > /dev/null 2>&1

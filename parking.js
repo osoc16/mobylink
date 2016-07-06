@@ -4,7 +4,7 @@ const got = require('got');
 
 const url = 'http://datatank.stad.gent/4/mobiliteit/bezettingparkingsrealtime.json';
 
-const base = 'https://osoc16.github.io/mobylink/parking/';
+const base = 'https://osoc16.github.io/mobylink/parking/terms/';
 
 const outputFile = "_data/parking.json";
 

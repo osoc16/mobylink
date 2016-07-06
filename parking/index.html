@@ -16,7 +16,7 @@ title: Parking
   <section class="items">
   {% for parking in site.data.parking['@graph'] %}
     <article>
-      <a href="http://www.google.com/maps/place/{{parking.latitude}},{{parking.longitude}}">
+      <a href="http://www.google.com/maps/place/{{parking.latitude}},{{parking.longitude}}" target="_blank">
         <!--Google Maps-->
         <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ghent,Belgium&zoom=13&size=600x300&maptype=roadmap&markers=color:red|{{parking.latitude}},{{parking.longitude}}&key=AIzaSyA8Tawxe7x2cpGiTpvOh35xHe8dUZsjsFg" alt="{{parking.description}}">
         <!-- todo: different api key? -->
@@ -30,7 +30,7 @@ title: Parking
         <p>{{parking.description}}</p>
         <p>{{parking.contact}}</p>
         <div>{{parking.OpenStatus}}</div>
-        <p>updated: {{ parking.parkingStatus.lastModifiedDate  | date: "%D" }}</p>
+        <p>updated: {{ parking.parkingStatus.lastModifiedDate  | date: "%D %R" }}</p>
         <div>
           <!--Capacity-->
           <!--Outer-->

@@ -1,0 +1,27 @@
+---
+layout: terms
+---
+<p>todo: explain what this all means</p>
+{% for situation in site.data.situations %}
+<article id="{{situation['$'].id}}">
+  <h1><a href="#{{situation['$'].id}}">{{situation["$"].id}}</a></h1>
+  <article>
+    <h1>info</h1>
+    <p>The whole situation</p>
+{% highlight json %}
+{{situation|jsonify}}
+{% endhighlight %}
+  </article>
+  {% for record in situation["ns2:situationRecord"] %}
+    <article id="{{record['$'].id}}">
+      <h1><a href="#{{record['$'].id}}">{{record["$"].id}}</a></h1>
+      <p>a single record</p>
+      <p>validity: {{record["ns2:validity"][0]["ns2:validityStatus"]}}</p>
+      <p>type: {{record["$"]["xsi:type"]}}</p>
+{% highlight json %}
+{{record|jsonify}}
+{% endhighlight %}
+    </article>
+  {% endfor %}
+</article>
+{% endfor %}

@@ -102,7 +102,7 @@ fabric.properties
 
 # *.iml
 # modules.xml
-# .idea/misc.xml 
+# .idea/misc.xml
 # *.ipr
 
 
@@ -112,3 +112,5 @@ _site/
 .jekyll-metadata
 /config.codekit
 Gemfile.lock
+
+node_modules

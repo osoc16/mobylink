@@ -4,11 +4,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Moby Link - Parking</title>
-    <meta name="description" content="Parking data in Ghent">
+    <title>Moby Link {% if page.title %} - {% endif %}{{page.title}}</title>
+    <meta name="description" content="{{page.title}} data in Ghent">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
-    <link rel="stylesheet" href="{{site.baseurl}}{% if layout.style %}{{layout.style}}{% else %}/src/common.css{% endif %}">
+    <link rel="stylesheet" href="{{site.baseurl}}{{layout.style | default: /src/common.css }}">
     <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon">
   </head>
 </html>

@@ -1,45 +1,47 @@
 ---
 layout: parking
+title: Parking
 ---
-  <header>
-    <h1><a>Parking Ghent</a></h1>
-    <nav>
-      <ul>
-        <li><a>Home</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="items">
-    {% for parking in site.data.parking['@graph'] %}
-      <article>
-        <a href="http://www.google.com/maps/place/{{parking.latitude}},{{parking.longitude}}">
-          <!--Google Maps-->
-          <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ghent,Belgium&zoom=13&size=600x300&maptype=roadmap&markers=color:red|{{parking.latitude}},{{parking.longitude}}&key=AIzaSyA8Tawxe7x2cpGiTpvOh35xHe8dUZsjsFg" alt="{{parking.description}}">
-          <!-- todo: different api key? -->
-        </a>
+<header>
+  <h1><a>Parking Ghent</a></h1>
+  <nav>
+    <ul>
+      <li><a>Home</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="items">
+  {% for parking in site.data.parking['@graph'] %}
+    <article>
+      <a href="http://www.google.com/maps/place/{{parking.latitude}},{{parking.longitude}}">
+        <!--Google Maps-->
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Ghent,Belgium&zoom=13&size=600x300&maptype=roadmap&markers=color:red|{{parking.latitude}},{{parking.longitude}}&key=AIzaSyA8Tawxe7x2cpGiTpvOh35xHe8dUZsjsFg" alt="{{parking.description}}">
+        <!-- todo: different api key? -->
+      </a>
+      <div>
+        <h2>{{parking.title}}</h2>
         <div>
-          <h2>{{parking.title}}</h2>
+          <p>{{parking.address}}</p>
+          <p>{{parking.city}}</p>
+        </div>
+        <p>{{parking.description}}</p>
+        <p>{{parking.contact}}</p>
+        <div>{{parking.OpenStatus}}</div>
+        <p>updated: {{ parking.parkingStatus.lastModifiedDate  | date: "%D" }}</p>
+        <div>
+          <!--Capacity-->
+          <!--Outer-->
           <div>
-            <p>{{parking.address}}</p>
-            <p>{{parking.city}}</p>
-          </div>
-          <p>{{parking.description}}</p>
-          <p>{{parking.contact}}</p>
-          <div>{{parking.OpenStatus}}</div>
-          <div>
-            <!--Capacity-->
-            <!--Outer-->
-            <div>
-              <!--Inner-->
+            <!--Inner-->
 
 
-            </div>
           </div>
         </div>
-      </article>
-    {% endfor %}
-    </section>
-  </main>
-  <footer>you can also find the <code>json-ld</code> of this data at <a href="{{site.baseurl}}/parking/parking.jsonld">{{site.baseurl}}/parking/parking.jsonld</a></footer>
-  <script type="application/ld+json" src="{{site.baseurl}}/parking/parking.jsonld"></script>
+      </div>
+    </article>
+  {% endfor %}
+  </section>
+</main>
+<footer>you can also find the <code>json-ld</code> of this data at <a href="{{site.baseurl}}/parking/parking.jsonld">{{site.baseurl}}/parking/parking.jsonld</a></footer>
+<script type="application/ld+json" src="{{site.baseurl}}/parking/parking.jsonld"></script>

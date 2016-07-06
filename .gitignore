@@ -111,3 +111,4 @@ _site/
 .sass-cache/
 .jekyll-metadata
 /config.codekit
+Gemfile.lock

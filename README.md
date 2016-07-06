@@ -4,6 +4,7 @@ This `gh-pages` is both a intro to the project, as a Jekyll method to create URI
 
 * [intro](https://osoc16.github.io/mobylink)
 * [verkeercentrum](https://osoc16.github.io/mobylink/verkeercentrum)
+* [parkings ghent](https://osoc16.github.io/mobylink/parking)
 
 # License
 

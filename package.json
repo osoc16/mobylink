@@ -1,0 +1,16 @@
+{
+  "name": "mobylink",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "parkings": "node parking.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.2",
+    "got": "^6.3.0",
+    "xml2js": "^0.4.16"
+  }
+}

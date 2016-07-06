@@ -1,5 +1,4 @@
 const fs = require('fs');
-const xml2js = require('xml2js');
 const got = require('got');
 
 const url = 'http://datatank.stad.gent/4/mobiliteit/bezettingparkingsrealtime.json';

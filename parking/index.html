@@ -10,20 +10,21 @@ layout: default
     </nav>
   </header>
   <main>
-    <section class="item">
+    <section class="items">
+    {% for parking in site.data.parking['@graph'] %}
       <article>
         <div>
           <!--Google Maps-->
         </div>
         <div>
-          <h2>title</h2>
+          <h2>{{parking.title}}</h2>
           <div>
-            <p>address</p>
-            <p>city</p>
+            <p>{{parking.address}}</p>
+            <p>{{parking.city}}</p>
           </div>
-          <p>description</p>
-          <p>contact</p>
-          <div>OpenStatus</div>
+          <p>{{parking.description}}</p>
+          <p>{{parking.contact}}</p>
+          <div>{{parking.OpenStatus}}</div>
           <div>
             <!--Capacity-->
             <!--Outer-->
@@ -35,6 +36,7 @@ layout: default
           </div>
         </div>
       </article>
+    {% endfor %}
     </section>
   </main>
   <footer></footer>

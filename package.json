@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "parkings": "node parking.js"
+    "parking": "node parking.js"
   },
   "author": "",
   "license": "MIT",

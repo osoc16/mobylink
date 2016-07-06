@@ -2,7 +2,7 @@
 layout: terms
 ---
 <p>todo: explain what this all means</p>
-{% for situation in site.data.situations %}
+{% for situation in site.data.verkeercentrum %}
 <article id="{{situation['$'].id}}">
   <h1><a href="#{{situation['$'].id}}">{{situation["$"].id}}</a></h1>
   <article>
@@ -25,3 +25,5 @@ layout: terms
   {% endfor %}
 </article>
 {% endfor %}
+
+<script type="application/ld+json" src="{{site.baseurl}}/verkeercentrum/verkeercentrum.jsonld"></script>

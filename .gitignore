@@ -110,3 +110,4 @@ fabric.properties
 _site/
 .sass-cache/
 .jekyll-metadata
+/config.codekit

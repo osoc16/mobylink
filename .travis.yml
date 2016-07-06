@@ -17,4 +17,5 @@ after_success:
 - git config user.name "oSoc bot"
 - git config user.email "hello+bot@haroen.me"
 - git commit -am "update data [ci skip]"
+- git status
 - git push https://${GH_OAUTH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} HEAD:gh-pages > /dev/null 2>&1

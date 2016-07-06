@@ -10,7 +10,7 @@ const outputFile = "_data/parking.json";
 let graph = [];
 let context = {
   "lastModifiedDate": "https://schema.org/dateModified",
-  "name": "http://schema.org/description/name",
+  "name": "http://schema.org/name",
   "description": "http://schema.org/description",
   "latitude": "http://schema.org/latitude",
   "longitude": "http://schema.org/longitude",

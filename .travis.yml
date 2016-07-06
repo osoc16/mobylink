@@ -1,17 +1,20 @@
-#!/bin/bash
-# commits to GitHub to give new data
-
-git clone https://${GH_OAUTH_TOKEN}@github.com/oSoc16/mobylink
-
-cd mobylink
-
-npm install
-
-npm run parking
-
-git config --global push.default simple
-git config user.name "oSoc bot"
-git config user.email "hello+bot@haroen.me"
-git pull
-git commit -am "update data"
-git push https://${GH_OAUTH_TOKEN}@github.com/oSoc16/mobylink HEAD:gh-pages > /dev/null 2>&1
+language: node_js
+node_js: 6
+sudo: false
+branches:
+  only:
+  - gh-pages
+git:
+  depth: 3
+env:
+  global:
+    secure: laYEJ0e14apvP394Rxgyqa6T+enML8yXutsmn39YoAWVGnsLBSbGHc7Qco8rc9hq3dWFBg77Au4zxJnvQqIpGAeDCvVpTzwurdqF1WQpKuxQIEhyZpLm5rodlE6mOZ2+oB9k+KTYaswSod1Qi0NjA96HUzuHRwPE9rY2YS6MPqpTEjY0jc1RedIXXctQ8nbR0J9uIK1ylcc0bidhJvVdr4mCgoWGagAwohiLMNkcUn+uSVbanlZHEUR94Yq1r+9YsX6UbK2vEHSX1BDHxS9NxikMCKcCIqrgNOCsjpybFVmENDHQMfSEBYEdlWNIbiYTOx79ii9lPwO9pOJOKXhsSj7qqp7as6VGy0FgLb+6rKIcdjtOUKmhCtXEyipKUKrsO1cSbaZma+IwlVTCEonTJEZeWUY3sxvYnxkI0O19SOSZzc+QqSlGzl46e3Lhexhel/NIFXPTIJamvsxFfznFB3PEQGPglkBGvO/X/l3lPt2/XlQHFhm1glD49Nrhz7Ja4Dqta2gpntLlI72eoTUoXbasB9gHZDyunRESg+ysmkF8wtQAlER+TVa2CCcNlfVV8gfyQEGhlHS4d3p4jm4INb8x4rctwKHWwZjKp2p3I1ue+uBRbwI2chNDRu6nLZe0xc6PB9rvplWSE+ra1YSZQ0gJ0Wp/jX9cXyPbVK98qIQ=
+script:
+- npm run parking
+- npm run verkeercentrum
+after_success:
+- git config --global push.default simple
+- git config user.name "oSoc bot"
+- git config user.email "hello+bot@haroen.me"
+- git commit -am "update data [ci skip]"
+- git push https://${GH_OAUTH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} HEAD:gh-pages > /dev/null 2>&1

@@ -2,6 +2,7 @@
 layout: parking
 title: Parking
 ---
+<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
 <header>
   <!--<h1><a href="{{site.baseurl}}">Moby Link</a> | <a href=".">Parking Ghent</a></h1> -->
   <h1 class="first"><a>PARKING</a></h1>
@@ -25,7 +26,7 @@ title: Parking
 
       <a href="http://www.google.com/maps/place/{{parking.latitude}},{{parking.longitude}}">
         <!--Google Maps-->
-        <img class="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Ghent,Belgium&zoom=13&size=600x300&maptype=roadmap&markers=color:red|{{parking.latitude}},{{parking.longitude}}&key=AIzaSyA8Tawxe7x2cpGiTpvOh35xHe8dUZsjsFg" alt="{{parking.description}}">
+        <img class="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Ghent,Belgium&zoom=13&size=400x200&maptype=roadmap&markers=color:red|{{parking.latitude}},{{parking.longitude}}&key=AIzaSyA8Tawxe7x2cpGiTpvOh35xHe8dUZsjsFg" alt="{{parking.description}}">
         <!-- todo: different api key? -->
       </a>
 
@@ -37,10 +38,10 @@ title: Parking
         </div>
         <p>{{parking.description}}</p> -->
         <p>{{parking.contact}}</p>
-        <div>{{parking.OpenStatus}}</div>
-        <meter min="0" max="300" value="234"></meter>
+        <div>{{parking.parkingStatus.openStatus}}</div>
+        <meter min="0" max="{{parking.parkingStatus.totalCapacity}}" value="{{parking.parkingStatus.availableCapacity}}"></meter>
         <div class="spotsOpen">
-          <span class="number">234</span>
+          <span class="number">{{parking.parkingStatus.availableCapacity}}</span>
           <p>VRIJE</p><p class="spots">PLAATSEN</p>
         </div>
         <p>updated: {{ parking.parkingStatus.lastModifiedDate  | date: "%D %R" }}</p>

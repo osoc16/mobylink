@@ -17,6 +17,7 @@ let graph = [];
 got(url).then(response => {
 
   parser = new xml2js.Parser({
+    mergeAttrs: true,
     tagNameProcessors: [xml2js.processors.stripPrefix],
     attrNameProcessors: [xml2js.processors.stripPrefix],
     valueProcessors: [xml2js.processors.parseNumbers],

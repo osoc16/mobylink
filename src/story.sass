@@ -16,10 +16,53 @@
     font-size: 16px
 
 section
+  box-sizing: border-box
+  position: relative
   height: 100vh
+  width: 100%
+  clear: both
+  padding: 0 5%
+
+/* ========================
+/* TEXT
+/* ========================
+
+.text
+  display: block
+  font-size: 2rem
+  background: $pink
+
+.text-width-30
+  width: 30%
+
+.text-width-40
+  width: 40%
+
+.text-width-50
+  width: 50%
+
+.text-left
+  @extend .text
+  position: absolute
+  left: 10%
+  top: 40vh
+
+.text-right
+  @extend .text
+  position: absolute
+  right: 10%
+  top: 40vh
+
 
 
 /* ========================
 /* HEADER
 /* ========================
 @import header
+
+/* ========================
+/* INTRO
+/* ========================
+@import section1
+
+@import section9

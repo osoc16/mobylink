@@ -1,0 +1,102 @@
+---
+---
+
+@import common
+
+$lobster:'Lobster', cursive
+$roboto: 'Roboto', sans-serif
+$mainColor: #17BAB6
+$green: #9CCC65
+
+=meterReset
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+
+// here you can define all styles for the parking index file
+/*body
+  max-width: 50em
+  margin: 0 auto
+  padding: 1em */
+
+nav
+  margin: 1em
+
+.list
+  margin-left: 2em
+  list-style-type: disc
+
+img
+  max-width: 100%
+
+// here you can define all styles for the parking index file
+
+
+header
+  margin-top: 60px
+  margin-bottom: 80px
+
+
+.first
+  margin-left: auto
+  color: $mainColor
+  font-family: $roboto
+  font-size: 40px
+  padding-left: 25%
+
+.second
+  display: flex
+  color: $mainColor
+  font-family: $lobster
+  font-size: 40px
+
+
+.line
+  background-color: $mainColor
+  height: 5px
+  width: 35%
+  margin-top: 20px
+  margin-right: 5%
+
+
+article
+  width: 80%
+  margin: auto
+  padding-bottom: 40px
+
+.map
+  width: 100%
+
+h2
+  font-family: $roboto
+  font-size: 18px
+  color: $mainColor
+
+meter
+  +meterReset
+  width: 100%
+
+meter::-webkit-meter-optimum-value
+  background: $green
+  -webkit-box-shadow: 3px 0px 0px rgba(0,0,0,0.1)
+
+meter::-webkit-meter-bar
+  background: #F44336
+
+.spotsOpen
+  font-family: $roboto
+  color: $green
+
+  .number
+    font-size: 30px
+    line-height: 25px
+
+  p
+    font-size: 18px
+
+  .spots
+    font-size: 10px
+
+
+

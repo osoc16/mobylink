@@ -1,0 +1,63 @@
+---
+layout: parking
+title: Parking
+---
+<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+<header>
+  <!--<h1><a href="{{site.baseurl}}">Moby Link</a> | <a href=".">Parking Ghent</a></h1> -->
+  <h1 class="first"><a>PARKING</a></h1>
+  <h1 class="second"> <div class="line"></div><a>Negenduusd</a></h1>
+  <!--
+  <nav>
+    <ul>
+      <li><a href="{{site.baseurl}}">Home</a></li>
+      <li><a href="{{site.baseurl}}/parking">Parkings</a></li>
+      <li><a href="{{site.baseurl}}/verkeercentrum/">Traffic</a></li>
+    </ul>
+  </nav> -->
+</header>
+<main>
+  <section class="items">
+  {% for parking in site.data.parking['@graph'] %}
+    <article>
+
+      <h2>{{parking.description}}</h2>
+      <p>{{parking.address}}</p>
+
+      <a href="http://www.google.com/maps/place/{{parking.latitude}},{{parking.longitude}}">
+        <!--Google Maps-->
+        <img class="map" src="https://maps.googleapis.com/maps/api/staticmap?center=Ghent,Belgium&zoom=13&size=400x200&maptype=roadmap&markers=color:red|{{parking.latitude}},{{parking.longitude}}&key=AIzaSyA8Tawxe7x2cpGiTpvOh35xHe8dUZsjsFg" alt="{{parking.description}}">
+        <!-- todo: different api key? -->
+      </a>
+
+      <div>
+        <!--<h2>{{parking.title}}</h2>
+        <div>
+          <p>{{parking.address}}</p>
+          <p>{{parking.city}}</p>
+        </div>
+        <p>{{parking.description}}</p> -->
+        <p>{{parking.contact}}</p>
+        <div>{{parking.parkingStatus.openStatus}}</div>
+        <meter min="0" max="{{parking.parkingStatus.totalCapacity}}" value="{{parking.parkingStatus.availableCapacity}}"></meter>
+        <div class="spotsOpen">
+          <span class="number">{{parking.parkingStatus.availableCapacity}}</span>
+          <p>VRIJE</p><p class="spots">PLAATSEN</p>
+        </div>
+        <p>updated: {{ parking.parkingStatus.lastModifiedDate  | date: "%D %R" }}</p>
+        <div>
+          <!--Capacity-->
+          <!--Outer-->
+          <div>
+            <!--Inner-->
+
+
+          </div>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+  </section>
+</main>
+<footer>you can also find the <code>json-ld</code> of this data at <a href="{{site.baseurl}}/parking/parking.jsonld">{{site.baseurl}}/parking/parking.jsonld</a></footer>
+<script type="application/ld+json" src="{{site.baseurl}}/parking/parking.jsonld"></script>

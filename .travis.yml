@@ -1,0 +1,21 @@
+language: node_js
+node_js: 6
+sudo: false
+branches:
+  only:
+  - gh-pages
+git:
+  depth: 3
+env:
+  global:
+  - secure: BXBPxtDTdJbSoNdjUrk+f/07WTWbnkiJOrBZxdzwXA7gsjxB6J39nhJ0SZ8FH3XH5jsOcS75uHhFCA+jEQwCZ9pgWO840iWNq9gEoV+ub9HRYdbewiFca9xz1ZPg7bHcqfmBKbNW4CtWxf6kyTOjd5BDjS5JmsSsSKt6uSwLPCO/dZFZUPQmp8bK+ZA86utyR391trKWiKYLINGflPFKhq0ioA1MyK42AIcbQPjXLx3ledDHNmiex9O0rFQNhL7g9rq/V/Ci20FLlWp2mxRmkBBj2apN8bWWEyVkd5S3zki0A6CrJpRNpdeOEiJIXCfeV6yioSKMV/BJQ8+txR+husL+mIPvxTJE+6GLIZzHCOi13rx7wWT3kcrDFlXDI8G5aZi/+sBcfFwfylhxv9LejZWPad5gfXlxH0OlHMOdnMx06UjPYAchx0I17Q5CxUdhCBdVsHl6R8xbYrcwzB155KuPXkdR2DYenednLRUGGzhwldPwMgU5dXGhdtPNIZ/zuC8rrOSbwyczMzCuxJ24iO8Dtx1XYr1GxUbb031v4a1wMR2vdEiAFDh1eSRuKNKqrnAdgl+bnQxgF7NdSdBzAVKmZ9o/cULp0JjIuOamAGw0g9WBPjgaqb9qUi+CwJaFPR72a1/z1v71Zioz8sbX75h8NWK+zesFkOa5QaGxbc8=
+script:
+- npm run parking
+- npm run verkeercentrum
+after_success:
+- git config --global push.default simple
+- git config user.name "oSoc bot"
+- git config user.email "hello+bot@haroen.me"
+- git commit -am "update data [ci skip]"
+- git status
+- git push https://${GH_OAUTH_TOKEN}@github.com/${TRAVIS_REPO_SLUG} HEAD:gh-pages > /dev/null 2>&1

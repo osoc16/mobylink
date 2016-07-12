@@ -1,0 +1,18 @@
+---
+layout: terms
+---
+<p>todo: explain what this all means</p>
+{% for parking in site.data.parking['@graph'] %}
+{% assign id = {{parking['@id']}} | split: '#' %}
+
+<article id="{{id[1]}}">
+  <h1><a href="#{{id[1]}}">{{id[1]}}</a></h1>
+    <h1>{{parking.description}}</h1>
+    <p>{{parking.address}}</p>
+{% highlight json %}
+{{parking|jsonify}}
+{% endhighlight %}
+</article>
+{% endfor %}
+
+<script type="application/ld+json" src="{{site.baseurl}}/parking/parking.jsonld"></script>

@@ -3,3 +3,63 @@ layout: default
 style: /src/css/story.css
 ---
 {{content}}
+<script>
+var div = document.createElement('div');
+div.id = 'particles-js';
+document.getElementById('intro').appendChild(div);
+
+function loadScript(url, callback) {
+  var head = document.getElementsByTagName('head')[0];
+  var script = document.createElement('script');
+  script.src = url;
+  script.onload = callback;
+  head.appendChild(script);
+}
+
+loadScript('https://cdn.rawgit.com/VincentGarreau/particles.js/master/particles.min.js', function() {
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 10,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#f9f7f7"
+      },
+      "size": {
+        "value": 20,
+        "random": true,
+      },
+      "line_linked": {
+        "color": "#f9f7f7",
+        "width": 4
+      },
+      "move": {
+        "speed": 2,
+      }
+    },
+    "interactivity": {
+      "detect_on": "window",
+      "events": {
+        "onhover": {
+          "enable": false
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "push": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
+})
+</script>

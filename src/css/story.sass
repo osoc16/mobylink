@@ -39,11 +39,15 @@ strong
 /* ANIMATIONS
 /* ======================== */
 .fly-in-before
-  right: 10%
   opacity: 0
 
 .fly-in-left
   right: 15%
+  opacity: 1
+  transition: all 0.5s ease-in
+
+.fly-in-right
+  left: 8%
   opacity: 1
   transition: all 0.5s ease-in
 
@@ -55,22 +59,31 @@ strong
   transition: all 0.5s ease-in
 
 /* ======================== */
-/* IMAGE
+/* FLEXBOX
 /* ======================== */
-.image
-  display: block
-  height: 80vh
-  width: 100%
-  text-indent: -100%
-  overflow: hidden
+.flex-it
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: flex-start
+
+  .image
+    flex-basis: 40%
+    height: 80vh
+    width: 100%
+    text-indent: -100%
+    overflow: hidden
+
+  .text
+    flex-basis: 60%
+    display: block
+    font-size: 2rem
+
 
 /* ======================== */
 /* TEXT
 /* ======================== */
-
-.text
-  display: block
-  font-size: 2rem
 
 .text-width-30
   width: 30%
@@ -82,7 +95,8 @@ strong
   width: 50%
 
 .text-centered
-  @extend .text
+  display: block
+  font-size: 2rem
   margin: 0 auto
   text-align: center
 

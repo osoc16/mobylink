@@ -1,6 +1,31 @@
 .section3-image
-    background-image: url("../img/anna.svg"), url("../img/parkingBrussels.svg"), url("../img/shop.svg"), url("../img/phone.svg")
+  display: flex
+  flex-direction: row
+  align-items: flex-end
+  background-image: url("../img/anna.svg"), url("../img/phone.svg")
+  background-repeat: no-repeat
+  background-size: 17%, 65%,
+  background-position: 65% bottom, 8% bottom
+  padding-left: 2.5%
+  padding-bottom: 20%
+  box-sizing: border-box
+  @extend .image
+
+  div
+    display: block
+    width: 10%
+    height: 20%
+    background-color: $pink
+    flex-basis: 17%
+
+  .parkingBrusselsApp
+    background-image: url("../img/parkingBrussels.svg")
     background-repeat: no-repeat
-    background-size: 7%, 4%, 4%, 25%
-    background-position: 25% 100%, 8% 70%, 14% 69%, 8% 100%
-    @extend .image
+    background-size: 45%
+    background-position: 50% 50%
+
+  .storeApp
+    background-image: url("../img/shop.svg")
+    background-repeat: no-repeat
+    background-size: 45%
+    background-position: 50% 50%

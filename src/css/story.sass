@@ -23,6 +23,7 @@ section
   clear: both
   padding: 0 5%
   z-index: 100
+  overflow: hidden
 
 *
   font-family: "Open Sans Regular", sans-serif
@@ -33,6 +34,35 @@ strong
   font-weight: 200
   color: $primary-text
 
+
+/* ======================== */
+/* ANIMATIONS
+/* ======================== */
+.fly-in-before
+  right: 10%
+  opacity: 0
+
+.fly-in-left
+  right: 15%
+  opacity: 1
+  transition: all 0.5s ease-in
+
+.fade-in-before
+  opacity: 0
+
+.fade-in
+  opacity: 1
+  transition: all 0.5s ease-in
+
+/* ======================== */
+/* IMAGE
+/* ======================== */
+.image
+  display: block
+  height: 80vh
+  width: 100%
+  text-indent: -100%
+  overflow: hidden
 
 /* ======================== */
 /* TEXT
@@ -63,7 +93,6 @@ strong
   text-align: center
 
 .text-vertical-centered
-  padding: 15vh 0 0
   text-align: center
 
 .text-right
@@ -80,9 +109,9 @@ strong
 @import header
 
 /* ======================== */
-/* INTRO
+/* SECTIONS
 /* ======================== */
 @import section1
 @import section2
-
+@import section3
 @import section9

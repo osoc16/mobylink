@@ -1,6 +1,18 @@
 .section2-image
   background-image: url("../img/anna.svg"), url("../img/bruce.svg")
   background-repeat: no-repeat
-  background-size: 15%, 25%
-  background-position: 8% bottom, 16% bottom
+  background-size: 35%, 60%
+  background-position: 8% bottom, 45% bottom
   @extend .image
+
+#section2
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-items: center
+  justify-content: flex-start
+
+  .image
+    flex-basis: 40%
+  .text
+    flex-basis: 60%

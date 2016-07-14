@@ -67,18 +67,57 @@ strong
   flex-wrap: wrap
   align-items: center
   justify-content: space-between
+  width: 100%
+
+  &.centered
+    justify-content: center
+    margin-top: 3%
+
+  &.flex-column
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: center
+
+  .button
+    background: $buttonWhiteBg
+    color: $highlight
+    padding: 15px 40px
+    box-sizing: border-box
+    text-decoration: none
+    margin: 2% 2%
+    border-radius: 1px
+    box-shadow: 0 2px 8px 0 transparentize($black,0.9),0 2px 20px 0 transparentize($black, 0.9)
+    text-transform: uppercase
+    font-family: "Oswald Regular"
+
+    &.button-big
+      font-size: 2em
+
+  .full-width
+    flex-basis: 100%
+
+  .align-center
+    text-align: center
 
   .image
     flex-basis: 40%
     height: 80vh
     width: 100%
-    text-indent: -100%
     overflow: hidden
 
   .text
     flex-basis: 60%
     display: block
     font-size: 2em
+
+    &.big-text
+      font-size: 4em
+
+    &.text-white
+      color: $secondary-text
+
+      strong
+        color: $secondary-text
 
 
 /* ======================== */
@@ -111,4 +150,9 @@ strong
 @import section1
 @import section2
 @import section3
+@import section4
+@import section5
+@import section6
+@import section7
+@import section8
 @import section9

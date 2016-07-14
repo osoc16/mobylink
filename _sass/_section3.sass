@@ -1,5 +1,5 @@
 .section3-image
-  background-image: url("https://osoc16.github.io/mobylink/src/img/anna.svg"), url("http://imgh.us/phone_6.svg")
+  background-image: url("../img/anna_reg.svg"), url("../img/phone.svg")
   background-size: 30%, 90%
   background-repeat: no-repeat
   background-position: right bottom, center center
@@ -8,17 +8,21 @@
   max-height: 450px
   height: 450px
   display: flex
-  margin-right: 100px
   @extend .image
 
-  .iconBrussels
+  .icon
     align-self: flex-end
     width: 60px
     height: 60px
-    padding: 0 0 75px 20px
+
+  .iconBrussels
+    padding: 0 0 75px 0
+    @extend .icon
 
   .iconShop
-    align-self: flex-end
-    width: 60px
-    height: 60px
+    padding: 0 0 75px 20px
+    @extend .icon
+
+  .iconGhent
     padding: 0 0 75px 0
+    @extend .icon

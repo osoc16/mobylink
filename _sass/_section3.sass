@@ -1,31 +1,24 @@
 .section3-image
-  display: flex
-  flex-direction: row
-  align-items: flex-end
-  background-image: url("../img/anna.svg"), url("../img/phone.svg")
+  background-image: url("https://osoc16.github.io/mobylink/src/img/anna.svg"), url("http://imgh.us/phone_6.svg")
+  background-size: 30%, 90%
   background-repeat: no-repeat
-  background-size: 17%, 65%,
-  background-position: 65% bottom, 8% bottom
-  padding-left: 2.5%
-  padding-bottom: 20%
-  box-sizing: border-box
+  background-position: right bottom, center center
+  max-width: 264px
+  min-width: 260px
+  max-height: 450px
+  height: 450px
+  display: flex
+  margin-right: 100px
   @extend .image
 
-  div
-    display: block
-    width: 10%
-    height: 20%
-    background-color: $pink
-    flex-basis: 17%
+  .iconBrussels
+    align-self: flex-end
+    width: 60px
+    height: 60px
+    padding: 0 0 75px 20px
 
-  .parkingBrusselsApp
-    background-image: url("../img/parkingBrussels.svg")
-    background-repeat: no-repeat
-    background-size: 45%
-    background-position: 50% 50%
-
-  .storeApp
-    background-image: url("../img/shop.svg")
-    background-repeat: no-repeat
-    background-size: 45%
-    background-position: 50% 50%
+  .iconShop
+    align-self: flex-end
+    width: 60px
+    height: 60px
+    padding: 0 0 75px 0

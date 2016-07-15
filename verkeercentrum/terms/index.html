@@ -2,27 +2,42 @@
 layout: terms
 ---
 <p>todo: explain what this all means</p>
-{% for situation in site.data.verkeercentrum %}
-<article id="{{situation['$'].id}}">
-  <h1><a href="#{{situation['$'].id}}">{{situation["$"].id}}</a></h1>
+
+{% for situation in site.data.verkeercentrum['@graph'].d2LogicalModel.payloadPublication.situation %}
+<article id="{{situation["@id"] | split: '#' | last}}">
+  <h1><a href="{{situation["@id"]}}">{{situation["@id"] | split: '#' | last}}</a></h1>
   <article>
     <h1>info</h1>
     <p>The whole situation</p>
-{% highlight json %}
-{{situation|jsonify}}
-{% endhighlight %}
+    {% highlight json %}
+    {{situation|jsonify}}
+    {% endhighlight %}
   </article>
-  {% for record in situation["ns2:situationRecord"] %}
-    <article id="{{record['$'].id}}">
-      <h1><a href="#{{record['$'].id}}">{{record["$"].id}}</a></h1>
+  {% if situation["situationRecord"] contains '@id'%}
+    {% assign record = situation["situationRecord"] %}
+    <article id="{{record["@id"] | split: '#' | last}}">
+      <h1><a href="{{record["@id"]}}">{{record["@id"] | split: '#' | last}}</a></h1>
       <p>a single record</p>
-      <p>validity: {{record["ns2:validity"][0]["ns2:validityStatus"]}}</p>
-      <p>type: {{record["$"]["xsi:type"]}}</p>
-{% highlight json %}
-{{record|jsonify}}
-{% endhighlight %}
+      <p>validity: {{record["validity"][0]["validityStatus"]}}</p>
+      <p>type: {{record["$"]["type"]}}</p>
+      {% highlight json %}
+      {{record|jsonify}}
+      {% endhighlight %}
+    </article>
+  {% else %}
+  {% for record in situation["situationRecord"] %}
+    <article id="{{record["@id"] | split: '#' | last}}">
+      <h1><a href="{{record["@id"]}}">{{record["@id"] | split: '#' | last}}</a></h1>
+      <p>a single record</p>
+      <p>validity: {{record["validity"][0]["validityStatus"]}}</p>
+      <p>type: {{record["$"]["type"]}}</p>
+      {% highlight json %}
+      {{record|jsonify}}
+      {% endhighlight %}
     </article>
   {% endfor %}
+  {% endif %}
+
 </article>
 {% endfor %}
 

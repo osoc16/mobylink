@@ -7,7 +7,7 @@
   max-width: 264px
   min-width: 260px
   max-height: 450px
-  height: 450px !important
+  height: 450px
   display: flex
   position: relative
   @extend .image
@@ -37,6 +37,51 @@
     height: 45%
     right: -8%
     bottom: 4%
+
+  #iconCross
+    width: 50px
+    height: auto
+    position: absolute
+    bottom: 95px
+    right: 22%
+    transform-origin: 50% 50%
+    transition: all 1s ease
+
+@media (max-width: 550px)
+  #section3
+    flex-wrap: nowrap
+    font-size: .8em
+  .section3-image
+    min-width: initial
+    width: 125px !important
+    max-width: 125px
+    height: 200px !important
+    max-height: 200px
+
+  #iconBrussels
+    flex-basis: initial !important
+    padding: 0 0 38px 0 !important
+    width: 30px !important
+    height: 30px !important
+
+  #iconShop
+    padding: 0 0 38px 15px !important
+    width: 30px !important
+    height: 30px !important
+
+  #iconGhent
+    padding: 0 0 38px 0 !important
+    width: 30px !important
+    height: 30px !important
+
+  #iconCross
+    width: 20px !important
+    height: auto
+    bottom: 38px !important
+    right: 20% !important
+
+  .text
+    flex-basis: 70% !important
 
 #section3
   .text

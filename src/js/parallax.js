@@ -52,6 +52,9 @@ $(function() {
     transition: '1s ease opacity',
     opacity: '0'
   });
+  $('#iconCross').css({
+    transform: 'scale(0,0)'
+  });
   $('#section2 .text').addClass('fly-in-before');
 
   var startedSection3 = false;
@@ -92,8 +95,9 @@ $(function() {
           transform: ''
         }
       }, {
-        '#textGhent': {
-          opacity: '1'
+        '#textGhent, #iconCross': {
+          opacity: '1',
+          transform: ''
         }
       }], 1000, '#section3');
       startedSection3 = true;

@@ -67,16 +67,32 @@ strong
   flex-wrap: wrap
   align-items: center
   justify-content: space-between
+  flex-basis: 100%
   width: 100%
+
+  &.no-center
+    @media(max-width: 600px)
+      align-items: stretch
+
 
   &.centered
     justify-content: center
     margin-top: 3%
 
+  &.vertical-center
+    align-items: center
+
   &.flex-column
     flex-direction: column
     flex-wrap: nowrap
     justify-content: center
+
+  &.basis-40
+    flex-basis: 40%
+
+  &.full-basis-image
+    @media(max-width: 600px)
+      flex-basis: 100%
 
   .button
     background: $buttonWhiteBg
@@ -100,8 +116,8 @@ strong
     text-align: center
 
   .image
+    flex-basis: 40%
     flex-basis: 50%
-    height: 80vh
     width: 100%
     overflow: hidden
 
@@ -109,6 +125,14 @@ strong
     flex-basis: 50%
     display: block
     font-size: 2em
+    flex-shrink: 1
+
+    &.full-basis-text
+      @media(max-width: 600px)
+        flex-basis: 100%
+
+    &.text-flex-basis-40
+      flex-basis: 40%
     @media (max-width: 700px)
       font-size: 1.4em
 

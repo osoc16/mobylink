@@ -1,15 +1,17 @@
 .section3-image
   // margin-left: 10%
-  background-image: url("../img/anna_reg.svg"), url("../img/phone.svg")
-  background-size: 30%, 90%
+  background-image: url("../img/phone.svg")
+  background-size: 90%
   background-repeat: no-repeat
-  background-position: right bottom, center center
+  background-position: center center
   max-width: 264px
   min-width: 260px
   max-height: 450px
   height: 450px !important
   display: flex
+  position: relative
   @extend .image
+  overflow: visible !important
 
   %icon
     align-self: flex-end
@@ -19,16 +21,22 @@
     height: 60px
 
   #iconBrussels
-    padding: 0 0 75px 0
+    padding: 0 0 95px 0
     @extend %icon
 
   #iconShop
-    padding: 0 0 75px 20px
+    padding: 0 0 95px 30px
     @extend %icon
 
   #iconGhent
-    padding: 0 0 75px 0
+    padding: 0 0 95px 0
     @extend %icon
+
+  #anna
+    position: absolute
+    height: 45%
+    right: -8%
+    bottom: 4%
 
 #section3
   .text

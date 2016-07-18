@@ -55,6 +55,10 @@ $(function() {
 
   var startedSection3 = false;
 
+  var section2Top = $('#section2').offset().top;
+  var section3Top = $('#section3').offset().top;
+  var section3Bottom = $('#section3').offset().top + $(window).height();
+
 
   $(window).scroll(function(e) {
 
@@ -74,30 +78,24 @@ $(function() {
     //Animations
 
     //SECTION2
-    if (wScroll > $('#section2').offset().top - ($(window).height() / 3)) {
+    if (wScroll > section2Top - ($(window).height() / 3)) {
       $('#section2 p').addClass("fly-in-left");
+      $('.section2-image').addClass("fly-in-right");
       // pJSDom[0].pJS.particles.move.enable = false;
     }
 
-    if (wScroll > $('.section2-image').offset().top - ($(window).height() / 3)) {
-      $('.section2-image').addClass("fly-in-right");
-    }
-
     //SECTION3
-    if (wScroll > $('#section3').offset().top || wScroll < $('#section3').offset().bottom) {
-      if (!startedSection3) {
-        animateScroll([{
-          '#iconGhent': {
-            transform: ''
-          }
-        }, {
-          '#textGhent': {
-            opacity: '1'
-          }
-        }], 1000, '#section3');
-        startedSection3 = true;
-      }
+    if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
+      animateScroll([{
+        '#iconGhent': {
+          transform: ''
+        }
+      }, {
+        '#textGhent': {
+          opacity: '1'
+        }
+      }], 1000, '#section3');
+      startedSection3 = true;
     }
-
   });
 });

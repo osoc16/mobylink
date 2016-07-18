@@ -1,10 +1,12 @@
 #who
+  h2
+    text-align: center
+
   .container
-    @include container(90%)
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
 
   .content
-    float: left
-    width: span(30%)
-    margin-right: gutter(5%)
-    &:last-of-type
-      margin-right: 0
+    flex: 1 0 10em
+    margin: .5em

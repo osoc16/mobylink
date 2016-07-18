@@ -9,9 +9,9 @@ layout: terms
   <article>
     <h1>info</h1>
     <p>The whole situation</p>
-    {% highlight json %}
-    {{situation|jsonify}}
-    {% endhighlight %}
+{% highlight json %}
+{{situation|jsonify}}
+{% endhighlight %}
   </article>
   {% if situation["situationRecord"] contains '@id'%}
     {% assign record = situation["situationRecord"] %}
@@ -20,9 +20,9 @@ layout: terms
       <p>a single record</p>
       <p>validity: {{record["validity"][0]["validityStatus"]}}</p>
       <p>type: {{record["$"]["type"]}}</p>
-      {% highlight json %}
-      {{record|jsonify}}
-      {% endhighlight %}
+{% highlight json %}
+{{record|jsonify}}
+{% endhighlight %}
     </article>
   {% else %}
   {% for record in situation["situationRecord"] %}
@@ -31,9 +31,9 @@ layout: terms
       <p>a single record</p>
       <p>validity: {{record["validity"][0]["validityStatus"]}}</p>
       <p>type: {{record["$"]["type"]}}</p>
-      {% highlight json %}
-      {{record|jsonify}}
-      {% endhighlight %}
+{% highlight json %}
+{{record|jsonify}}
+{% endhighlight %}
     </article>
   {% endfor %}
   {% endif %}

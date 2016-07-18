@@ -107,7 +107,7 @@ strong
     font-family: "Oswald Regular"
 
     &.button-big
-      font-size: 2em
+      font-size: 1.5em
 
   .full-width
     flex-basis: 100%
@@ -117,11 +117,12 @@ strong
 
   .image
     flex-basis: 40%
+    flex-basis: 50%
     width: 100%
     overflow: hidden
 
   .text
-    flex-basis: 60%
+    flex-basis: 50%
     display: block
     font-size: 2em
     flex-shrink: 1
@@ -132,6 +133,8 @@ strong
 
     &.text-flex-basis-40
       flex-basis: 40%
+    @media (max-width: 700px)
+      font-size: 1.4em
 
     &.big-text
       font-size: 4em
@@ -158,9 +161,17 @@ strong
 
 .text-centered
   display: block
-  font-size: 2em
+  font-size: 1.5em
   margin: 0 auto
   text-align: center
+
+  &.sub
+    font-size: 1em
+
+  &.padding
+    padding: 20px
+
+
 
 /* ======================== */
 /* HEADER

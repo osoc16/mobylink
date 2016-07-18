@@ -114,3 +114,4 @@ _site/
 Gemfile.lock
 
 node_modules
+.idea/

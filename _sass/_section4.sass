@@ -1,17 +1,92 @@
+#section4
+  .john
+    position: absolute
+    bottom: 50px
+    left: 5%
+    width: 150px
+
+    
+
 .section4-image
-  background-image: url("../img/bruce_reg.svg"), url("../img/tablet.svg")
+  position: relative
+  background-image: url("../img/tablet.svg")
   background-repeat: no-repeat
-  background-position: 3% 70%, 50% 50%
-  background-size: 20%, 90%
-  max-width: 420px
-  min-width: 400px
+  background-position: 50% 50%
+  background-size: contain
+  max-width: 550px
+  min-width: 500px
+  height: 400px
   flex-direction: row
   flex-wrap: wrap
+  flex-basis: 100%
   @extend .image
+
+  @media (max-width: 1500px)
+    max-width: 400px
+    min-width: 400px
+    height: 400px
+
+  @media(max-width: 1200px)
+    max-width: 300px
+    min-width: 270px
+    height: 300px
+
+  @media(max-width: 800px)
+    max-width: 300px
+    min-width: 200px
+    height: 300px
+
+  @media(max-width: 600px)
+    max-width: 500px
+    min-width: 450px
+    height: 300px
+
+
+  div
+    position: absolute
+    top: 70px
+    left: 65px
+    width: 370px
+
+    @media (max-width: 1500px)
+      position: absolute
+      top: 95px
+      left: 50px
+      width: 300px
+
+    @media (max-width: 1200px)
+      position: absolute
+      top: 80px
+      left: 50px
+      width: 200px
+
+    @media (max-width: 800px)
+      position: absolute
+      top: 100px
+      left: 30px
+      width: 150px
+
+    @media(max-width: 600px)
+      position: absolute
+      top: 40px
+      left: 70px
+      width: 300px
 
   .icon
     width: 60px
     height: 60px
+
+    @media (max-width: 1500px)
+      width: 40px
+      height: 40px
+
+    @media(max-width: 1200px)
+      width: 30px
+      height: 30px
+
+    @media(max-width: 600px)
+      width: 60px
+      height: 60px
 
   .section4-margin-top
     margin: 51% 80px 0

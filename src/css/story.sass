@@ -63,12 +63,14 @@ strong
 /* ======================== */
 .flex-it
   display: flex
+  position: relative
   flex-direction: row
   flex-wrap: wrap
   align-items: center
   justify-content: space-between
   flex-basis: 100%
   width: 100%
+  box-sizing: border-box
 
   &.no-center
     @media(max-width: 600px)
@@ -116,7 +118,6 @@ strong
     text-align: center
 
   .image
-    flex-basis: 40%
     flex-basis: 50%
     width: 100%
     overflow: hidden
@@ -127,14 +128,20 @@ strong
     font-size: 2em
     flex-shrink: 1
 
+    &.text-small
+      font-size: 1em
+
+    &.text-padding-top
+      padding-top: 40px
+
     &.full-basis-text
       @media(max-width: 600px)
         flex-basis: 100%
 
     &.text-flex-basis-40
       flex-basis: 40%
-    @media (max-width: 700px)
-      font-size: 1.4em
+      @media (max-width: 700px)
+        font-size: 1.4em
 
     &.big-text
       font-size: 4em
@@ -168,8 +175,7 @@ strong
   &.sub
     font-size: 1em
 
-  &.padding
-    padding: 20px
+
 
 
 

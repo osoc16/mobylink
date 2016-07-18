@@ -1,6 +1,10 @@
 .section2-image
   background-image: url("../img/anna_wave.svg"), url("../img/bruce_reg.svg")
   background-repeat: no-repeat
-  background-size: 27%, 40%
-  background-position: 30% bottom, 52% bottom
+  background-size: 35%, 60%
+  background-position: 8% bottom, 45% bottom
+  @media (max-width: 700px)
+    background-position: 8% 83%, 45% 80%
+  @media (max-width: 520px)
+    background-position: 8% 62.5%, 45% 60%
   @extend .image

@@ -11,19 +11,28 @@
   display: flex
   @extend .image
 
-  .icon
+  %icon
     align-self: flex-end
+    transform-origin: 50% 15%
+    transition: transform 1s ease
     width: 60px
     height: 60px
 
-  .iconBrussels
+  #iconBrussels
     padding: 0 0 75px 0
-    @extend .icon
+    @extend %icon
 
-  .iconShop
+  #iconShop
     padding: 0 0 75px 20px
-    @extend .icon
+    @extend %icon
 
-  .iconGhent
+  #iconGhent
     padding: 0 0 75px 0
-    @extend .icon
+    @extend %icon
+
+#section3
+  .text
+    padding: 1em
+    box-sizing: border-box
+    p
+      padding: .5em

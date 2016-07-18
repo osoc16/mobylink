@@ -44,7 +44,7 @@ function animateScroll(steps, duration, sourceElement) {
 //Document ready
 $(function() {
 
-  // prepare animation of icons flying in in #section3
+  // prepare animations
   $('#iconGhent').css({
     transform: 'scale(0,0)'
   });
@@ -52,6 +52,7 @@ $(function() {
     transition: '1s ease opacity',
     opacity: '0'
   });
+  $('#section2 .text').addClass('fly-in-before');
 
   var startedSection3 = false;
 

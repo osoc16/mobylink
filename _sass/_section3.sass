@@ -1,9 +1,11 @@
 .section3-image
   // margin-left: 10%
-  background-image: url("../img/phone.svg")
-  background-size: 90%
+  background-image: url("../img/phone.svg"), url("../img/bol.svg")
+  background-size: 90%, 100%
   background-repeat: no-repeat
   background-position: center center
+  flex-direction: row
+  flex-wrap: wrap
   max-width: 264px
   min-width: 260px
   max-height: 450px
@@ -12,6 +14,7 @@
   position: relative
   @extend .image
   overflow: visible !important
+
 
   %icon
     align-self: flex-end
@@ -49,8 +52,9 @@
 
 @media (max-width: 550px)
   #section3
-    flex-wrap: nowrap
-    font-size: .8em
+    flex-wrap: wrap
+    flex-direction: row
+
   .section3-image
     min-width: initial
     width: 125px !important

@@ -2,6 +2,11 @@
 
 @import 'codemirror';
 
+#section10 {
+  height: auto;
+  border-bottom: none;
+}
+
 .node circle {
   cursor: pointer;
   fill: #fff;

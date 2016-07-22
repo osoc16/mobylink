@@ -1,5 +1,5 @@
 .section3-image
-  // margin-left: 10%
+  margin-left: 12%
   background-image: url("../img/phone.svg"), url("../img/bol.svg")
   background-size: 90%, 100%
   background-repeat: no-repeat
@@ -50,6 +50,7 @@
     transform-origin: 50% 50%
     transition: all .5s ease
 
+
 @media (max-width: 550px)
   #section3
     flex-wrap: wrap
@@ -61,6 +62,7 @@
     max-width: 125px
     height: 200px !important
     max-height: 200px
+    margin-left: 0
 
   #iconBrussels
     flex-basis: initial !important
@@ -97,3 +99,40 @@
 
     p
       padding: .5em
+
+
+@media (max-width: 700px)
+  #section3
+    flex-wrap: wrap
+    flex-direction: row
+
+  .section3-image
+    min-width: initial
+    width: 150px !important
+    max-width: 150px
+    height: 255px !important
+    max-height: 255px
+
+  #iconBrussels
+    flex-basis: initial !important
+    padding: 0 0 60px !important
+    width: 35px !important
+    height: 35px !important
+
+  #iconShop
+    padding: 0 0 60px 22px !important
+    width: 35px !important
+    height: 35px !important
+
+  #iconGhent
+    padding: 0 0 60px 0 !important
+    width: 35px !important
+    height: 35px !important
+
+  #iconCross
+    width: 20px !important
+    height: auto
+    bottom: 60px !important
+    right: 20% !important
+
+

@@ -80,11 +80,23 @@ $(function() {
 
 
     $('#section2 p').css({
-      'transform': 'translateY(' + wScroll / 50 + '%)'
+      'transform': 'translateY(-' + wScroll / 40 + '%)'
     });
 
     $('.section2-image').css({
-      'transform': 'translateY(' + wScroll / 60 + '%)'
+      'transform': 'translateY(-' + wScroll / 60 + '%)'
+    });
+
+    $('#section4 p').css({
+      'transform': 'translateY(-' + wScroll / 10 + '%)'
+    });
+
+    $('.section4-image').css({
+       'transform': 'translateY(-' + wScroll / 30 + '%)'
+    });
+
+    $('.john').css({
+        'transform': 'translateY(-' + wScroll / 30 + '%)'
     });
 
     //Animations

@@ -104,6 +104,7 @@ function scrollTo(to, callback, duration) {
     increment = 20;
   duration = (typeof(duration) === "undefined") ? 500 : duration;
   var animateScroll = function() {
+    window.dispatchEvent(new Event('wheel'));
     // increment the time
     currentTime += increment;
     // find the value with the quadratic in-out easing function
@@ -126,7 +127,9 @@ function scrollTo(to, callback, duration) {
 //adding the scrolling href
 function addListener(i) {
   i.addEventListener("click", function(e) {
+    // window.dispatchEvent(new Event('wheel'));
     scrollTo(document.getElementById(i.href.substr(i.href.indexOf("#") + 1)).offsetTop, function() {
+      // window.dispatchEvent(new Event('wheel'));
       document.location = i.href;
     });
     e.preventDefault();

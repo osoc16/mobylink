@@ -103,7 +103,6 @@ $(function() {
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
-
       animateScroll([{
         '#iconGhent': {
           transform: ''

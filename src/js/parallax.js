@@ -70,34 +70,24 @@ $(function() {
     var wScroll = $(this).scrollTop();
 
     //Parallax intro
-    $('#intro p').css({
-      'transform': 'translate(0px,' + wScroll / 10 + '%)'
-    });
+    if (wScroll > section3Top) {
+      $('#intro p').css({
+        'transform': 'translate(0px,' + wScroll / 10 + '%)'
+      });
 
-    $('#intro a').css({
-      'transform': 'translate(0px,' + wScroll / 2 + '%)'
-    });
+      $('#intro a').css({
+        'transform': 'translate(0px,' + wScroll / 2 + '%)'
+      });
 
 
-    $('#section2 p').css({
-      'transform': 'translateY(' + wScroll / 50 + '%)'
-    });
+      $('#section2 p').css({
+        'transform': 'translateY(' + wScroll / 50 + '%)'
+      });
 
-    $('.section2-image').css({
-      'transform': 'translateY(' + wScroll / 50 + '%)'
-    });
-
-    //Animations
-
-/*
-    //SECTION2
-    if (wScroll > section2Top - ($(window).height() / 3)) {
-      $('#section2 p').addClass("fly-in-left");
-      $('.section2-image').addClass("fly-in-right");
-      // pJSDom[0].pJS.particles.move.enable = false;
+      $('.section2-image').css({
+        'transform': 'translateY(' + wScroll / 50 + '%)'
+      });
     }
-    */
-
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {

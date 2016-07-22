@@ -1,3 +1,36 @@
-<footer>
-  Hello this is footer
+<footer id="footer">
+  <p>vocab.datex.org is an effort by <a href="http://biotope.cs.hut.fi">the Biotope project</a>, <a href="http://opentnet.eu">Open Transport Net project</a>, <a href="http://www.its.be">ITS Belgium</a>, <a href="http://www.iminds.be">iMinds</a> and <a href="http://transport.okfn.org">Open Transport</a> at <a href="https://okfn.org">Open Knowledge</a>.</p>
+  <p>This informative page was initially created for <a href="http://2016.summerofcode.be">open Summer of code 2016</a></p>
+  <ul>
+    <li><a href="http://biotope.cs.hut.fi"><img src="{{site.baseurl}}/src/img/biotope.svg" alt="biotope"></a></li>
+    <li><a href="http://opentnet.eu"><img src="{{site.baseurl}}/src/img/opentransportnet.svg" alt="opentnet"></a></li>
+    <li><a href="http://www.its.be"><img src="{{site.baseurl}}/src/img/its.svg" alt="ITS"></a></li>
+    <li><a href="http://www.iminds.be"><img src="{{site.baseurl}}/src/img/iminds.svg" alt="iMinds"></a></li>
+    <li><a href="http://transport.okfn.org"><img src="{{site.baseurl}}/src/img/transport.svg" alt="transport"></a></li>
+    <li><a href="http://2016.summerofcode.be"><img src="{{site.baseurl}}/src/img/osoc16.svg" alt="oSoc"></a></li>
+  </ul>
 </footer>
+
+<style>
+  footer {
+    border-top: solid currentColor .3em;
+    margin: 0 auto;
+    padding: 2em;
+    font-size: .8em;
+  }
+  footer p {
+    text-align: center;
+  }
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em 2em;
+  }
+  footer li {
+    height: 3em;
+  }
+  footer img {
+    height: 3em;
+  }
+</style>

@@ -49,7 +49,7 @@ $(function() {
     transform: 'scale(0,0)'
   });
   $('#textGhent').css({
-    transition: '1s ease opacity',
+    transition: '.5s ease opacity',
     opacity: '0'
   });
   $('#iconCross').css({
@@ -110,7 +110,7 @@ $(function() {
           opacity: '1',
           transform: ''
         }
-      }], 1000, '#section3');
+      }], 500, '#section3');
       startedSection3 = true;
     }
   });

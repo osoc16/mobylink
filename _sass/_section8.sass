@@ -1,0 +1,78 @@
+#parkingFrame
+  width: 400px
+  border: .2em solid currentColor
+  background-color: #FFF
+  overflow: hidden
+  height: 600px
+  flex-shrink: 0
+
+.half-size
+  display: block
+  width: 70%
+
+.paragraph-padding-top
+  padding-top: 20px
+
+.big-text
+  font-size: 1.4em
+
+.button-group
+  margin: 10px 0
+  clear: both
+  width: 100%
+  .button
+    display: block
+    height: 40px
+    box-sizing: border-box
+    background: $highlight
+    padding: 10px 10px
+    color: $secondary-text
+    min-width: 270px
+    text-align: center
+    text-decoration: none
+    border-radius: 1px
+    font-size: 1em
+    font-family: "Oswald Regular", sans-serif
+    line-height: 1em
+    float: left
+    clear: both
+    margin: 5px 0
+    text-transform: uppercase
+
+    &.sideBySide
+      float: left
+      clear: none
+      max-width: 300px
+
+      &:first-of-type
+        margin-right: 2em
+
+    .smallFont
+      font-size: 0.6em
+      color: $secondary-text
+.box
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: flex-start
+  align-items: flex-start
+  box-sizing: border-box
+
+  &.box-column
+    flex-direction: column
+    flex-wrap: nowrap
+    align-items: flex-start
+
+  &.box-shrink
+    flex-shrink: 1
+
+  .box-content
+    box-sizing: border-box
+    &:first-of-type
+      margin-left: 50px
+
+#section8
+  background-image: url("../img/anna_bruce_solved.svg")
+  background-repeat: no-repeat
+  background-position: right 200px
+  overflow: hidden

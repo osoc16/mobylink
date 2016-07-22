@@ -55,7 +55,7 @@ $(function() {
   $('#iconCross').css({
     transform: 'scale(0,0)'
   });
-  $('#section2 .text').addClass('fly-in-before');
+  //$('#section2 .text').addClass('fly-in-before');
 
   var startedSection3 = false;
 
@@ -79,14 +79,25 @@ $(function() {
     });
 
 
+    $('#section2 p').css({
+      'transform': 'translateY(' + wScroll / 50 + '%)'
+    });
+
+    $('.section2-image').css({
+      'transform': 'translateY(' + wScroll / 50 + '%)'
+    });
+
     //Animations
 
+/*
     //SECTION2
     if (wScroll > section2Top - ($(window).height() / 3)) {
       $('#section2 p').addClass("fly-in-left");
       $('.section2-image').addClass("fly-in-right");
       // pJSDom[0].pJS.particles.move.enable = false;
     }
+    */
+
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {

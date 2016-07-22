@@ -1,14 +1,21 @@
 #parkingFrame
   width: 400px
-  border: .2em solid currentColor
+  border: .2em solid $highlight
   background-color: #FFF
   overflow: hidden
   height: 600px
   flex-shrink: 0
 
+  @media(max-width: 850px)
+    flex-basis: 100%
+    margin: 0 auto
+
 .half-size
   display: block
   width: 70%
+
+  @media (max-width: 450px)
+    width: 100%
 
 .paragraph-padding-top
   padding-top: 20px
@@ -17,12 +24,15 @@
   font-size: 1.4em
 
 .button-group
-  margin: 10px 0
+  margin: 10px 0 40px
   clear: both
   width: 100%
   height: 50px
   display: block
-  margin-bottom: 40px
+
+  @media (max-width: 320px)
+    margin: 20px 0 40px
+
   .button
     display: block
     height: 40px
@@ -41,6 +51,9 @@
     clear: both
     margin: 5px 0
     text-transform: uppercase
+
+    @media(max-width: 450px)
+      width: 100%
 
     &.sideBySide
       float: left
@@ -61,6 +74,22 @@
   align-items: flex-start
   box-sizing: border-box
 
+  @media(max-width: 850px)
+    flex-wrap: wrap
+
+  &.box-background-annajohn
+    background: none
+
+    @media (max-width: 850px)
+      background-image: url("../img/anna_bruce_solved.svg")
+      background-repeat: no-repeat
+      background-size: 35%
+      background-position: right 90px
+      overflow: hidden
+
+    @media (max-width: 450px)
+      background: none
+
   &.box-medium
     width: 90%
 
@@ -78,10 +107,17 @@
   &.box-margin-top
     margin-top: 100px
 
+    @media (max-width: 320px)
+      margin-top: 50px
+
   .box-content
     box-sizing: border-box
     &:first-of-type
       margin-left: 50px
+
+      @media(max-width: 450px)
+        margin-left: 0
+        text-align: center
 
   .text-margin-bottom
     margin-bottom: 20px
@@ -100,7 +136,17 @@
       width: 75%
 
 #section8
+  height: auto !important
   background-image: url("../img/anna_bruce_solved.svg")
   background-repeat: no-repeat
-  background-position: right 200px
+  background-size: 30%
+  background-position: right 350px
   overflow: hidden
+  height: auto !important
+
+  @media (max-width: 1100px)
+    background-size: 20%
+    background-position: right 400px
+
+  @media (max-width: 850px)
+    background: none

@@ -21,3 +21,6 @@ Here's a list on some of the tools you can use
 * BioTope
     * Internet of Things in a linked data way
     * [biotope.cs.hut.fi](http://biotope.cs.hut.fi)
+* Jekyll terms maker
+    * use Jekyll to create a static terms page
+    * [github](https://github.com/osoc16/jekyll-term-generator)

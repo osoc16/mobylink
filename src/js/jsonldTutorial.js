@@ -9,10 +9,7 @@ drake.on('drop', function(el, target, source, sibling) {
 		sibling.classList.remove('tag');
 		sibling.classList.add('empty');
 		sibling.textContent = '';
-	}
+	};
+	// submit the frame
+	document.getElementById('json-iframe').src = '//95.85.15.16/parking/?json=' + encodeURIComponent(JSON.stringify(JSON.parse(document.getElementById('json-source').textContent)));
 });
-
-document.getElementById('json-submit').addEventListener('click', function(e) {
-	e.preventDefault();
-	document.getElementById('json-iframe').src = 'http://95.85.15.16/parking/?json=' + encodeURIComponent(JSON.stringify(JSON.parse(document.getElementById('json-source').textContent)));
-})

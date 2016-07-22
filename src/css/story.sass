@@ -72,11 +72,14 @@ strong
   width: 100%
   box-sizing: border-box
 
+  @media(max-width: 600px)
+    justify-content: center
+    align-items: flex-start
+    align-content: flex-start
 
   &.no-center
-    @media(max-width: 600px)
+    @media(max-width: 550px)
       align-items: stretch
-
 
   &.centered
     justify-content: center
@@ -119,18 +122,18 @@ strong
     text-align: center
 
   .image
-    flex-basis: 45%
+    flex-basis: 50%
     width: 100%
     overflow: hidden
 
   .text
     flex-basis: 45%
     display: block
-    font-size: 2em
+    font-size: 1.5em
     flex-shrink: 1
 
     @media(max-width: 1200px)
-      font-size: 1.5em
+      font-size: 1.3em
 
     @media(max-width: 800px)
       font-size: 1em

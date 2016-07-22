@@ -1,20 +1,25 @@
 .section2-image
   background-image: url("../img/anna_bruce.svg")
   background-repeat: no-repeat
-  background-size: 60%
+  background-size: 50%
   background-position: center center
-  height: auto
+  height: 600px
   flex-wrap: wrap
-  flex-direction: row
+  flex-direction: column
 
+  @media (max-width: 1200px)
+    height: 600px
 
+  @media (max-width: 700px)
+    height: 500px
 
-  //@media (max-width: 700px)
-  //  background-position: 8% 83%
-  //
-  //@media (max-width: 520px)
-  //  background-position: 8% 62.5%
+  @media (max-width: 550px)
+    height: 300px
+    background-size: 100%
 
+  @media (max-width: 200px)
+    height: 300px
+    background-size: 100%
 
   @extend .image
 

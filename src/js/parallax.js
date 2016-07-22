@@ -49,13 +49,13 @@ $(function() {
     transform: 'scale(0,0)'
   });
   $('#textGhent').css({
-    transition: '1s ease opacity',
+    transition: '.5s ease opacity',
     opacity: '0'
   });
   $('#iconCross').css({
     transform: 'scale(0,0)'
   });
-  $('#section2 .text').addClass('fly-in-before');
+  //$('#section2 .text').addClass('fly-in-before');
 
   var startedSection3 = false;
 
@@ -70,22 +70,23 @@ $(function() {
     var wScroll = $(this).scrollTop();
 
     //Parallax intro
-    $('#intro p').css({
-      'transform': 'translate(0px,' + wScroll / 10 + '%)'
-    });
+    if (wScroll > section3Top) {
+      $('#intro p').css({
+        'transform': 'translate(0px,' + wScroll / 10 + '%)'
+      });
 
-    $('#intro a').css({
-      'transform': 'translate(0px,' + wScroll / 2 + '%)'
-    });
+      $('#intro a').css({
+        'transform': 'translate(0px,' + wScroll / 2 + '%)'
+      });
 
 
-    //Animations
+      $('#section2 p').css({
+        'transform': 'translateY(' + wScroll / 50 + '%)'
+      });
 
-    //SECTION2
-    if (wScroll > section2Top - ($(window).height() / 3)) {
-      $('#section2 p').addClass("fly-in-left");
-      $('.section2-image').addClass("fly-in-right");
-      // pJSDom[0].pJS.particles.move.enable = false;
+      $('.section2-image').css({
+        'transform': 'translateY(' + wScroll / 50 + '%)'
+      });
     }
 
     //SECTION3
@@ -99,7 +100,7 @@ $(function() {
           opacity: '1',
           transform: ''
         }
-      }], 1000, '#section3');
+      }], 500, '#section3');
       startedSection3 = true;
     }
   });

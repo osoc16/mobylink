@@ -6,6 +6,10 @@
     background: $highlight-bg
     color: $secondary-text
 
+    // hack for some reason
+    .full
+      margin-top: -1em
+      margin-bottom: -1em
 
   .gu-mirror
     position: fixed !important
@@ -41,6 +45,7 @@
       border-radius: 5px
       line-height: 1.2em
       padding: 0.2em
+      margin: 0.2em
 
     &.full
       display: block
@@ -94,6 +99,26 @@
 
       @media (max-width: 1024px)
         flex: 0 0 100%
+
+@keyframes buzz-left-right
+  0%
+    transform: translateX(0)
+  25%
+    transform: translateX(-.2em)
+  50%
+    transform: translateX(0)
+  75%
+    transform: translateX(.2em)
+  100%
+    transform: translateX(0)
+
+#drag
+  display: flex
+  flex-wrap: wrap
+
+  .tag:hover
+    animation: buzz-left-right 100ms 20ms linear 3
+
 
 code
   white-space: nowrap

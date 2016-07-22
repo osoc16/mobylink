@@ -46,6 +46,7 @@
       display: block
       width: 92%
       margin: 8px auto
+      min-width: 370px
   pre
     font-family: Consolas, Menlo, monospace
     font-size: .8em
@@ -71,7 +72,7 @@
 
   #json-iframe
     height: 500px
-    min-width: 300px
+    border: 0.2em solid $highlight
 
   .flex
     display: flex
@@ -85,5 +86,11 @@
       flex-grow: 1
       margin-left: 1em
 
-    &-40e
-      flex: 0 0 40em
+      @media(max-width: 1024px)
+        margin-left: 0px
+
+    &-30e
+      flex: 0 0 30em
+
+      @media (max-width: 1024px)
+        flex: 0 0 100%

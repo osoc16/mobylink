@@ -49,7 +49,7 @@ $(function() {
     transform: 'scale(0,0)'
   });
   $('#textGhent').css({
-    transition: '1s ease opacity',
+    transition: '.5s ease opacity',
     opacity: '0'
   });
   $('#iconCross').css({
@@ -70,49 +70,40 @@ $(function() {
     var wScroll = $(this).scrollTop();
 
     //Parallax intro
-    $('#intro p').css({
-      'transform': 'translate(0px,' + wScroll / 10 + '%)'
-    });
+    if (wScroll < section3Top) {
+      $('#intro p').css({
+        'transform': 'translate(0px,' + wScroll / 10 + '%)'
+      });
 
-    $('#intro a').css({
-      'transform': 'translate(0px,' + wScroll / 2 + '%)'
-    });
+      $('#intro a').css({
+        'transform': 'translate(0px,' + wScroll / 2 + '%)'
+      });
 
 
-    $('#section2 p').css({
-      'transform': 'translateY(-' + wScroll / 10 + '%)'
-    });
+      $('#section2 p').css({
+        'transform': 'translateY(-' + wScroll / 10 + '%)'
+      });
 
-    $('.section2-image').css({
-      'transform': 'translateY(' + wScroll / 60 + '%)'
-    });
+      $('.section2-image').css({
+        'transform': 'translateY(' + wScroll / 60 + '%)'
+      });
 
-    $('#section4 p').css({
-      'transform': 'translateY(' + wScroll / 50 + '%)'
-    });
+      $('#section4 p').css({
+        'transform': 'translateY(' + wScroll / 50 + '%)'
+      });
 
-    $('.section4-image').css({
-       'transform': 'translateY(' + wScroll / 70 + '%)'
-    });
-
-    $('.john').css({
+      $('.section4-image').css({
         'transform': 'translateY(' + wScroll / 70 + '%)'
-    });
+      });
 
-    //Animations
-
-/*
-    //SECTION2
-    if (wScroll > section2Top - ($(window).height() / 3)) {
-      $('#section2 p').addClass("fly-in-left");
-      $('.section2-image').addClass("fly-in-right");
-      // pJSDom[0].pJS.particles.move.enable = false;
+      $('.john').css({
+        'transform': 'translateY(' + wScroll / 70 + '%)'
+      });
     }
-    */
-
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
+
       animateScroll([{
         '#iconGhent': {
           transform: ''
@@ -122,7 +113,7 @@ $(function() {
           opacity: '1',
           transform: ''
         }
-      }], 1000, '#section3');
+      }], 500, '#section3');
       startedSection3 = true;
     }
   });

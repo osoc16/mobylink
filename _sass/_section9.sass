@@ -94,3 +94,28 @@
 
       @media (max-width: 1024px)
         flex: 0 0 100%
+
+code
+  white-space: nowrap
+  background: $highlight-bg
+  color: $highlight
+  padding: 0.3em
+  font-size: 0.8em
+  border-radius: 2px
+  box-shadow: inset $primary-text 0px 0px 10px
+  font-family: consolas, menlo, monospace
+
+  @media(max-width: 400px)
+    font-size: 0.6em
+
+.list
+  display: block
+  width: 30%
+  min-width: 320px
+  background: $highlight-bg
+  list-style: inside disc
+  margin-bottom: 2em
+  padding: 1em 1em
+  li
+    color: $highlight
+    font-family: consolas, menlo, monospace

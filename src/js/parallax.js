@@ -70,7 +70,7 @@ $(function() {
     var wScroll = $(this).scrollTop();
 
     //Parallax intro
-    if (wScroll > section3Top) {
+    if (wScroll < section3Top) {
       $('#intro p').css({
         'transform': 'translate(0px,' + wScroll / 10 + '%)'
       });
@@ -91,6 +91,13 @@ $(function() {
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
+
+      console.log($('#intro p,.section2-image,#intro a,#section2 p'));
+
+      $('#intro p,.section2-image,#intro a,#section2 p').css({
+        'transform': ''
+      });
+
       animateScroll([{
         '#iconGhent': {
           transform: ''

@@ -84,7 +84,7 @@ $(function() {
     });
 
     $('.section2-image').css({
-      'transform': 'translateY(' + wScroll / 50 + '%)'
+      'transform': 'translateY(' + wScroll / 60 + '%)'
     });
 
     //Animations

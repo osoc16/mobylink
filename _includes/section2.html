@@ -1,4 +1,15 @@
 <section id="section2" class="flex-it">
   <div class="section2-image"></div>
   <p class="text">Hi! I’m Anna. My friend John and I just arrived in Ghent and we’re in quite a hurry to find a parking spot!</p>
+  <a href="#section3" id="to-section3" class="internal-link internal-arrow">⬇</a>
+  <script>
+    document.getElementById('to-section3').addEventListener('click',function(){
+      var styled = document.querySelectorAll('#iconGhent, #textGhent, #iconCross');
+      for (var i = 0; i < styled.length; i++) {
+        styled[i].style.transform = '';
+        styled[i].style.opacity = 1;
+      }
+      animateScroll = null;
+    });
+  </script>
 </section>

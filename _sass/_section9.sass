@@ -5,6 +5,7 @@
   #json-source
     background: $highlight-bg
     color: $secondary-text
+    overflow: auto
 
     // hack for some reason
     .full
@@ -112,12 +113,24 @@
   100%
     transform: translateX(0)
 
+@media (max-width: 510px)
+  #drag .tag
+    font-size: .8em
+
 #drag
   display: flex
   flex-wrap: wrap
 
-  .tag:hover
-    animation: buzz-left-right 100ms 20ms linear 3
+  .tag
+
+    &.full
+      display: initial
+      width: initial
+      margin: .2em
+      min-width: initial
+
+    &:hover
+      animation: buzz-left-right 100ms 20ms linear 3
 
 
 code

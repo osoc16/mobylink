@@ -1,14 +1,33 @@
+
 .section7-image
   background-image: url("../img/globe.svg")
   background-repeat: no-repeat
   background-position: center center
-  height: 450px !important
+  height: 270px
   display: flex
   -moz-transform: scaleX(-1)
   -o-transform: scaleX(-1)
   -webkit-transform: scaleX(-1)
   transform: scaleX(-1)
   @extend .image
+
+  @media (max-width: 1200px)
+    height: 270px
+    //background-color: mediumaquamarine
+
+  @media (max-width: 700px)
+    height: 200px
+    padding-top: 100px
+
+  @media (max-width: 600px)
+    height: 250px
+    background-size: 70%
+    padding-top: 20px
+
+
+  @media (max-width: 320px)
+    height: 150px
+    background-size: 70%
 
 
 .text-centered-section7
@@ -17,4 +36,16 @@
   margin: 0 auto
   text-align: center
 
+  @media (max-width: 599px)
+    padding-bottom: 0px
 
+  @media (max-width: 3000px)
+    padding-bottom: 20px
+
+
+.secion7-flex-p
+  @media (max-width: 550px)
+    flex-basis: 80% !important
+
+  @media (max-width: 3000px)
+    flex-basis: 50%

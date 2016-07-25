@@ -1,5 +1,5 @@
-<section id="section9">
-  <div class="box box-column box-medium box-cetered">
+<section id="section9" class="section-margin-bottom">
+  <div class="box box-column box-cetered">
     <h2 class="text-margin-bottom">JSON to JSON-LD</h2>
     <div class="paragraphs">
       <p>Changing JSON into JSON-LD is very easy! All that needs to be done is implementing the URIs which make the data linked!</p>
@@ -25,23 +25,7 @@
     "<span class="tag replace">occupied</span>": 150,
     "<span class="tag replace">capacity</span>": 450
   }</pre>
-      <div id="drag">
-        <span class="tag full"><pre style="font: inherit;color:inherit;">"@context": {
-  "dtx": "https://vocab.datex.org/terms#"
-},</pre></span>
-<!-- todo: stop creating enters on full tag -->
-        <span class="tag full">"@type": "dtx:parkingSite",</span>
-        <span class="tag">dtx:parkingName</span>
-        <span class="tag">dtx:parkingSiteAddress</span>
-        <span class="tag">dtx:parkingLocation</span>
-        <span class="tag">dtx:latitude</span>
-        <span class="tag">dtx:longitude</span>
-        <span class="tag">dtx:contactDetailsTelephoneNumber</span>
-        <span class="tag">dtx:parkingDescription</span>
-        <span class="tag">dtx:parkingSpaceOccupied</span>
-        <span class="tag">dtx:totalCapacity</span>
-      </div>
-      <button id="json-submit">Validate</button>
+      <div id="drag"><noscript class="tag">You need JavaScript enabled for this.</noscript></div>
     </div>
     <iframe src="http://95.85.15.16/parking/" name="json-iframe" id="json-iframe" frameborder="0" class="flex-grow"></iframe>
   </div>

@@ -5,7 +5,12 @@
   #json-source
     background: $highlight-bg
     color: $secondary-text
+    overflow: auto
 
+    // hack for some reason
+    .full
+      margin-top: -1em
+      margin-bottom: -1em
 
   .gu-mirror
     position: fixed !important
@@ -41,6 +46,7 @@
       border-radius: 5px
       line-height: 1.2em
       padding: 0.2em
+      margin: 0.2em
 
     &.full
       display: block
@@ -55,20 +61,20 @@
   pre, #drag
     line-height: 1.8
 
-  #json-submit
-    background: $highlight
-    color: $secondary-text
-    border: none
-    border-radius: 2px
-    box-sizing: border-box
-    padding: 5px 30px
-    text-transform: uppercase
-    font-size: 1.2em
-    margin: 2em 0 2em auto
-    display: block
-    cursor: pointer
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0
-    font-family: "Oswald Regular", sans-serif
+  // #json-submit
+  //   background: $highlight
+  //   color: $secondary-text
+  //   border: none
+  //   border-radius: 2px
+  //   box-sizing: border-box
+  //   padding: 5px 30px
+  //   text-transform: uppercase
+  //   font-size: 1.2em
+  //   margin: 2em 0 2em auto
+  //   display: block
+  //   cursor: pointer
+  //   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0
+  //   font-family: "Oswald Regular", sans-serif
 
   #json-iframe
     height: 500px
@@ -94,3 +100,72 @@
 
       @media (max-width: 1024px)
         flex: 0 0 100%
+
+@keyframes buzz-left-right
+  0%
+    transform: translateX(0)
+  25%
+    transform: translateX(-.2em)
+  50%
+    transform: translateX(0)
+  75%
+    transform: translateX(.2em)
+  100%
+    transform: translateX(0)
+
+@media (max-width: 510px)
+  #drag .tag
+    font-size: .8em
+
+#drag
+  display: flex
+  flex-wrap: wrap
+  margin: 2em 0
+
+  .tag
+
+    &.full
+      display: initial
+      width: initial
+      margin: .2em
+      min-width: initial
+
+    &:hover
+      animation: buzz-left-right 100ms 20ms linear 3
+
+
+code
+  white-space: nowrap
+  background: $highlight-bg
+  color: $highlight
+  padding: 0.3em
+  font-size: 0.8em
+  border-radius: 2px
+  box-shadow: inset $primary-text 0px 0px 10px
+  font-family: consolas, menlo, monospace
+
+  @media(max-width: 400px)
+    font-size: 0.6em
+
+  @media(max-width: 500px)
+    white-space: normal
+
+.list
+  display: block
+  min-width: 200px
+  max-width: 400px
+  background: $highlight-bg
+  list-style: inside disc
+  margin-bottom: 2em
+  padding: 1em 1em
+
+  @media(max-width: 400px)
+    padding: 1em 1em
+    list-style: none
+
+  li
+    color: $highlight
+    font-family: consolas, menlo, monospace
+
+    @media(max-width: 350px)
+      font-size: 0.8em

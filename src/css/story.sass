@@ -25,8 +25,9 @@ section
   padding: 0 5%
   z-index: 100
   overflow: hidden
+  // border-bottom: 5px solid $highlight
 
-*
+body
   font-family: "Open Sans Regular", sans-serif
   color: $primary-text
 
@@ -34,6 +35,23 @@ strong
   font-family: "Open Sans Bold", sans-serif
   font-weight: 200
   color: $primary-text
+
+.internal-arrow
+  position: absolute
+  cursor: pointer
+  bottom: 0
+  left: 45%
+  right: 45%
+  height: 1.5em
+  min-width: 1em
+  max-width: 1.5em
+  background:
+    image: url("../img/arrow.svg")
+    size: contain
+    repeat: no-repeat
+  color: transparent
+  padding: .5em
+  font-size: 2em
 
 /* ======================== */
 /* ANIMATIONS
@@ -74,8 +92,7 @@ strong
 
   @media(max-width: 600px)
     justify-content: center
-    align-items: flex-start
-    align-content: flex-start
+    align-content: center
 
   &.no-center
     @media(max-width: 550px)

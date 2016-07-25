@@ -104,6 +104,7 @@ function scrollTo(to, callback, duration) {
     increment = 20;
   duration = (typeof(duration) === "undefined") ? 500 : duration;
   var animateScroll = function() {
+    window.dispatchEvent(new Event('wheel'));
     // increment the time
     currentTime += increment;
     // find the value with the quadratic in-out easing function
@@ -126,7 +127,9 @@ function scrollTo(to, callback, duration) {
 //adding the scrolling href
 function addListener(i) {
   i.addEventListener("click", function(e) {
+    // window.dispatchEvent(new Event('wheel'));
     scrollTo(document.getElementById(i.href.substr(i.href.indexOf("#") + 1)).offsetTop, function() {
+      // window.dispatchEvent(new Event('wheel'));
       document.location = i.href;
     });
     e.preventDefault();
@@ -138,6 +141,10 @@ for (var i = 0; i < links.length; i++) {
   addListener(links[i]);
 }
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.1/dragula.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.1/dragula.min.js"></script>
 <script src="src/js/jsonldTutorial.js"></script>
+<script src="src/js/RDFa.min.1.1.0.js"></script>
+<script src="src/js/codemirror-compressed.js"></script>
+<script src="src/js/d3.v2.min.js"></script>
+<script src="src/js/rdfa-playground.js"></script>
 {% endif %}

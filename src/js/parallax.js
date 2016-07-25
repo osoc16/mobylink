@@ -62,6 +62,7 @@ $(function() {
   var section2Top = $('#section2').offset().top;
   var section3Top = $('#section3').offset().top;
   var section3Bottom = $('#section3').offset().top + $(window).height();
+  var section4Top = $('#section4').offset().top;
 
 
   $(window).scroll(function(e) {
@@ -80,26 +81,31 @@ $(function() {
       });
 
 
-      $('#section2 p').css({
-        'transform': 'translateY(-' + wScroll / 10 + '%)'
-      });
-
-      $('.section2-image').css({
-        'transform': 'translateY(' + wScroll / 60 + '%)'
-      });
-
-      $('#section4 p').css({
-        'transform': 'translateY(' + wScroll / 50 + '%)'
-      });
-
-      $('.section4-image').css({
-        'transform': 'translateY(' + wScroll / 70 + '%)'
-      });
-
-      $('.john').css({
-        'transform': 'translateY(' + wScroll / 70 + '%)'
-      });
-    }
+    //   $('#section2 p').css({
+    //     'transform': 'translateY(-' + wScroll / 10 + '%)'
+    //   });
+    //
+    //   $('.section2-image').css({
+    //     'transform': 'translateY(' + wScroll / 60 + '%)'
+    //   });
+    // }
+    //
+    // if (wScroll > section3Top) {
+    //
+    //     console.log(wScroll);
+    //
+    //     $('#section4 p').css({
+    //         'transform': 'translateY(-' + wScroll / 4 + '%)'
+    //     });
+    //
+    //     $('.section4-image').css({
+    //         'transform': 'translateY(-' + wScroll / 50 + '%)'
+    //     });
+    //
+    //     $('.john').css({
+    //         'transform': 'translateY(-' + wScroll / 50 + '%)'
+    //     });
+    // }
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {

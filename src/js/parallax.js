@@ -95,6 +95,7 @@ $(function() {
       $('#intro a').css({
         'transform': 'translate(0px,' + wScroll / 2 + '%)'
       });
+    }
 
 
     //   $('#section2 p').css({
@@ -125,16 +126,18 @@ $(function() {
 
     //SECTION3
     if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
-      animateScroll([{
-        '#iconGhent': {
-          transform: ''
-        }
-      }, {
-        '#textGhent, #iconCross': {
-          opacity: '1',
-          transform: ''
-        }
-      }], 500, '#section3');
+      if (animateScroll) {
+        animateScroll([{
+          '#iconGhent': {
+            transform: ''
+          }
+        }, {
+          '#textGhent, #iconCross': {
+            opacity: '1',
+            transform: ''
+          }
+        }], 500, '#section3');
+      }
       startedSection3 = true;
     }
   });

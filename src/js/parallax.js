@@ -61,7 +61,11 @@ $(function() {
 
   var section2Top = $('#section2').offset().top;
   var section3Top = $('#section3').offset().top;
+
   var section3Bottom = $('#section3').offset().top + $(window).height();
+  var section4Top = $('#section4').offset().top;
+  var section6Top = $('#section3').offset().top;
+  var currentProgress = 0;
   var section4Top = $('#section4').offset().top;
 
 
@@ -69,6 +73,18 @@ $(function() {
 
     //Window scroll
     var wScroll = $(this).scrollTop();
+
+    currentProgress = (wScroll / section6Top);
+    if (currentProgress < 3.56) {
+      $('#progressBar').css({
+          'height': currentProgress * 33.33 + 'vh'
+      });
+    } else {
+      $('#progressBar').css({
+          'height': 0
+      });
+    }
+
 
     //Parallax intro
     if (wScroll < section3Top) {

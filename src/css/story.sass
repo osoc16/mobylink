@@ -49,17 +49,14 @@ strong
   position: absolute
   cursor: pointer
   bottom: 0
-  left: 45%
-  right: 45%
-  height: 1.5em
-  min-width: 1em
-  max-width: 1.5em
+  left: 0
   background:
     image: url("../img/arrow.svg")
-    size: contain
+    size: 5%
     repeat: no-repeat
+    position: center 95%
   color: transparent
-  padding: .5em
+  width: 100%
   font-size: 2em
 
 /* ======================== */
@@ -94,6 +91,7 @@ strong
   flex-direction: row
   flex-wrap: wrap
   align-items: center
+  align-content: center
   justify-content: space-between
   flex-basis: 100%
   width: 100%
@@ -137,6 +135,8 @@ strong
     box-shadow: 0 2px 8px 0 transparentize($black, 0.9), 0 2px 20px 0 transparentize($black, 0.9)
     text-transform: uppercase
     font-family: "Oswald Regular"
+    min-width: 200px
+    text-align: center
 
     &.button-big
       font-size: 1.5em

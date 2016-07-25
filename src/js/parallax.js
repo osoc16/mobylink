@@ -77,11 +77,11 @@ $(function() {
     currentProgress = (wScroll / section6Top);
     if (currentProgress < 3.56) {
       $('#progressBar').css({
-          'height': currentProgress * 33.33 + 'vh'
+        'height': currentProgress * 33.33 + 'vh'
       });
     } else {
       $('#progressBar').css({
-          'height': 0
+        'height': 0
       });
     }
 
@@ -138,5 +138,7 @@ $(function() {
       }], 500, '#section3');
       startedSection3 = true;
     }
+
+
   });
 });

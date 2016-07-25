@@ -75,7 +75,6 @@ $(function() {
     var wScroll = $(this).scrollTop();
 
     currentProgress = (wScroll / section6Top);
-    console.log(currentProgress);
     if (currentProgress < 3.4) {
       $('#progressBar').css({
         'height': currentProgress * 33.33 + 'vh'

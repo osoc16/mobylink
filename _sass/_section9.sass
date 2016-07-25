@@ -146,14 +146,25 @@ code
   @media(max-width: 400px)
     font-size: 0.6em
 
+  @media(max-width: 500px)
+    white-space: normal
+
 .list
   display: block
-  width: 30%
-  min-width: 320px
+  min-width: 200px
+  max-width: 400px
   background: $highlight-bg
   list-style: inside disc
   margin-bottom: 2em
   padding: 1em 1em
+
+  @media(max-width: 400px)
+    padding: 1em 1em
+    list-style: none
+
   li
     color: $highlight
     font-family: consolas, menlo, monospace
+
+    @media(max-width: 350px)
+      font-size: 0.8em

@@ -24,7 +24,7 @@ section
   padding: 0 5%
   z-index: 100
   overflow: hidden
-  border-bottom: 5px solid $highlight
+  // border-bottom: 5px solid $highlight
 
 body
   font-family: "Open Sans Regular", sans-serif
@@ -37,20 +37,20 @@ strong
 
 .internal-arrow
   position: absolute
+  cursor: pointer
   bottom: 0
   left: 45%
   right: 45%
-  width: 10%
-  text-align: center
-  border-top-left-radius: 5px
-  border-top-right-radius: 5px
-  text-decoration: none
-  background-color: $highlight
-  color: $secondary-text
+  height: 1.5em
+  min-width: 1em
+  max-width: 1.5em
+  background:
+    image: url("../img/arrow.svg")
+    size: contain
+    repeat: no-repeat
+  color: transparent
   padding: .5em
   font-size: 2em
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)
-  // opacity: .5
 
 /* ======================== */
 /* ANIMATIONS

@@ -95,6 +95,7 @@ $(function() {
       $('#intro a').css({
         'transform': 'translate(0px,' + wScroll / 2 + '%)'
       });
+    }
 
 
     //   $('#section2 p').css({
@@ -137,5 +138,7 @@ $(function() {
       }], 500, '#section3');
       startedSection3 = true;
     }
+
+
   });
 });

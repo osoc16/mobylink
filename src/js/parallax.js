@@ -9,117 +9,117 @@
  * @return {boolean}                     `true` when finished.
  */
 function animateScroll(steps, duration, sourceElement) {
-  var step = 0;
-  var startedAnimating = false;
+    var step = 0;
+    var startedAnimating = false;
 
-  if (!startedAnimating) {
-    startedAnimating = true;
-    $(window).on("wheel.hold touchmove.hold", unset);
-    $(window).on("wheel.anim touchmove.anim", animate);
+    if (!startedAnimating) {
+        startedAnimating = true;
+        $(window).on("wheel.hold touchmove.hold", unset);
+        $(window).on("wheel.anim touchmove.anim", animate);
 
-    function unset(e) {
-      e.preventDefault();
-      document.querySelector(sourceElement).scrollIntoView();
+        function unset(e) {
+            e.preventDefault();
+            document.querySelector(sourceElement).scrollIntoView();
+        }
+
+        animating = false;
+
+        function animate() {
+            if (steps.length === step) {
+                $(window).off(".hold .anim");
+                return true;
+            } else if (!animating) {
+                animating = true;
+                $(Object.keys(steps[step])[0]).css(steps[step][Object.keys(steps[step])[0]])
+                setTimeout(function () {
+                    animating = false;
+                    step++;
+                }, duration);
+            }
+        }
     }
-
-    animating = false;
-
-    function animate() {
-      if (steps.length === step) {
-        $(window).off(".hold .anim");
-        return true;
-      } else if (!animating) {
-        animating = true;
-        $(Object.keys(steps[step])[0]).css(steps[step][Object.keys(steps[step])[0]])
-        setTimeout(function() {
-          animating = false;
-          step++;
-        }, duration);
-      }
-    }
-  }
 }
 
 
 //Document ready
-$(function() {
+$(function () {
 
-  // prepare animations
-  $('#iconGhent').css({
-    transform: 'scale(0,0)'
-  });
-  $('#textGhent').css({
-    transition: '.5s ease opacity',
-    opacity: '0'
-  });
-  $('#iconCross').css({
-    transform: 'scale(0,0)'
-  });
-  //$('#section2 .text').addClass('fly-in-before');
+    // prepare animations
+    $('#iconGhent').css({
+        transform: 'scale(0,0)'
+    });
+    $('#textGhent').css({
+        transition: '.5s ease opacity',
+        opacity: '0'
+    });
+    $('#iconCross').css({
+        transform: 'scale(0,0)'
+    });
+    //$('#section2 .text').addClass('fly-in-before');
 
-  var startedSection3 = false;
+    var startedSection3 = false;
 
-  var section2Top = $('#section2').offset().top;
-  var section3Top = $('#section3').offset().top;
-  var section3Bottom = $('#section3').offset().top + $(window).height();
-  var section4Top = $('#section4').offset().top;
-
-
-  $(window).scroll(function(e) {
-
-    //Window scroll
-    var wScroll = $(this).scrollTop();
-
-    //Parallax intro
-    if (wScroll < section3Top) {
-      $('#intro p').css({
-        'transform': 'translate(0px,' + wScroll / 10 + '%)'
-      });
-
-      $('#intro a').css({
-        'transform': 'translate(0px,' + wScroll / 2 + '%)'
-      });
+    var section2Top = $('#section2').offset().top;
+    var section3Top = $('#section3').offset().top;
+    var section3Bottom = $('#section3').offset().top + $(window).height();
+    var section4Top = $('#section4').offset().top;
 
 
-    //   $('#section2 p').css({
-    //     'transform': 'translateY(-' + wScroll / 10 + '%)'
-    //   });
-    //
-    //   $('.section2-image').css({
-    //     'transform': 'translateY(' + wScroll / 60 + '%)'
-    //   });
-    // }
-    //
-    // if (wScroll > section3Top) {
-    //
-    //     console.log(wScroll);
-    //
-    //     $('#section4 p').css({
-    //         'transform': 'translateY(-' + wScroll / 4 + '%)'
-    //     });
-    //
-    //     $('.section4-image').css({
-    //         'transform': 'translateY(-' + wScroll / 50 + '%)'
-    //     });
-    //
-    //     $('.john').css({
-    //         'transform': 'translateY(-' + wScroll / 50 + '%)'
-    //     });
-    // }
+    $(window).scroll(function (e) {
 
-    //SECTION3
-    if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
-      animateScroll([{
-        '#iconGhent': {
-          transform: ''
+        //Window scroll
+        var wScroll = $(this).scrollTop();
+
+        //Parallax intro
+        if (wScroll < section3Top) {
+            $('#intro p').css({
+                'transform': 'translate(0px,' + wScroll / 10 + '%)'
+            });
+
+            $('#intro a').css({
+                'transform': 'translate(0px,' + wScroll / 2 + '%)'
+            });
+
+
+            //   $('#section2 p').css({
+            //     'transform': 'translateY(-' + wScroll / 10 + '%)'
+            //   });
+            //
+            //   $('.section2-image').css({
+            //     'transform': 'translateY(' + wScroll / 60 + '%)'
+            //   });
+            // }
+            //
+            // if (wScroll > section3Top) {
+            //
+            //     console.log(wScroll);
+            //
+            //     $('#section4 p').css({
+            //         'transform': 'translateY(-' + wScroll / 4 + '%)'
+            //     });
+            //
+            //     $('.section4-image').css({
+            //         'transform': 'translateY(-' + wScroll / 50 + '%)'
+            //     });
+            //
+            //     $('.john').css({
+            //         'transform': 'translateY(-' + wScroll / 50 + '%)'
+            //     });
         }
-      }, {
-        '#textGhent, #iconCross': {
-          opacity: '1',
-          transform: ''
+
+        //SECTION3
+        if (wScroll > section3Top && wScroll < section3Bottom && !startedSection3) {
+            animateScroll([{
+                '#iconGhent': {
+                    transform: ''
+                }
+            }, {
+                '#textGhent, #iconCross': {
+                    opacity: '1',
+                    transform: ''
+                }
+            }], 500, '#section3');
+            startedSection3 = true;
         }
-      }], 500, '#section3');
-      startedSection3 = true;
-    }
-  });
+    });
 });

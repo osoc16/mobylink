@@ -76,7 +76,7 @@ $(function() {
     //console.log("position: " + wScroll);
     //console.log("Max position: " + section6Top);
     currentProgress = (wScroll / section6Top);
-    console.log(currentProgress);
+    //console.log(currentProgress);
     if (currentProgress < 0.98) {
       $('#progressBar').css({
         'height': currentProgress * 100 + 'vh'

@@ -2,29 +2,30 @@
   <div class="box box-column box-cetered">
     <h2 class="text-margin-bottom">JSON to JSON-LD</h2>
     <div class="paragraphs">
-      <p>Changing JSON into JSON-LD is very easy! All that needs to be done is implementing the URIs which make the data linked!</p>
-      <p>You need an @context tag which refers to the datex vocabulary (e.g. <a href="http://vocab.datex.org/terms#" title="Vocab")>vocab.datex.org/terms#</a>). On vocab.datex.org you can find all the terms that are defined in Datex II. Once that's done you need an @type tag to indicate what kind of content you're defining. For the parking context it is: "parkingSite".</p>
-      <p>All that rests is to use the existing URIs from the Datex II vocab website to define the properties of your parking (e.g. parkingName)</p>
-      <p>Underneath there is a neat drag and drop tutorial to help you get started!</p>
+      <p>To add machine-readable data with <a href="http://json-ld.org" title="JSON-LD specification">JSON-LD</a> to a webpage, the first step is defining what data to send. We will now create a JSON file that can be embedded in a page.</p>
+      <p>To be able to read the definitions of all the terms it is necessary to provide context. Providing context in JSON-LD is done with the <code>@context</code>-tag, in which prefixes or vocabularies are defined. We will use a <code>dtx</code> prefix for the Datex vocabulary.</p>
+      <p>The next part is defining the type of the data. In our case we will set a parking site. Following our <a href="http://vocab.datex.org/terms" title="linked datex vocabulary">vocabulary</a> this is defined as <code>dtx:ParkingSite</code>.</p>
+      <p>Following that step it’s possible to provide all of the data. By browsing through the vocabulary it’s possible to find relevant terms. Let’s try this by dragging the correct terms on this JSON:</p>
+      <p>Finally you should put the data in a <code>script</code>-tag with <code>type</code> <code>application/ld+json</code>.</p>
     </div>
   </div>
 
 
   <div class="flex flex-row">
     <div class="flex-30e">
-  <pre id="json-source">  {
-    <span class="empty replace"></span>
-    <span class="empty replace"></span>
-    "<span class="tag replace">name</span>": "Parking Schoondracht",
-    "<span class="tag replace">addresss</span>": "Maria-Hendrikaplein 1",
-    "<span class="tag replace">city</span>": "9000 Ghent",
-    "<span class="tag replace">latitude</span>": "51.037051",
-    "<span class="tag replace">longitude</span>": "3.709925",
-    "<span class="tag replace">tel</span>": "0032497466234",
-    "<span class="tag replace">descr</span>": "P16: Schoondracht",
-    "<span class="tag replace">occupied</span>": 150,
-    "<span class="tag replace">capacity</span>": 450
-  }</pre>
+<pre id="json-source">  {
+  <span class="empty replace"></span>
+  <span class="empty replace"></span>
+  "<span class="tag replace">name</span>": "Parking Schoondracht",
+  "<span class="tag replace">addresss</span>": "Maria-Hendrikaplein 1",
+  "<span class="tag replace">city</span>": "9000 Ghent",
+  "<span class="tag replace">latitude</span>": "51.037051",
+  "<span class="tag replace">longitude</span>": "3.709925",
+  "<span class="tag replace">tel</span>": "0032497466234",
+  "<span class="tag replace">descr</span>": "P16: Schoondracht",
+  "<span class="tag replace">occupied</span>": 150,
+  "<span class="tag replace">capacity</span>": 450
+}</pre>
       <div id="drag"><noscript class="tag">You need JavaScript enabled for this.</noscript></div>
     </div>
     <iframe src="http://95.85.15.16/parking/" name="json-iframe" id="json-iframe" frameborder="0" class="flex-grow"></iframe>

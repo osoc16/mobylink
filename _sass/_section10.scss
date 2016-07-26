@@ -7,6 +7,24 @@
   border-bottom: none;
 }
 
+#rdfa-playground {
+  position: relative;
+  padding: 3em;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #242422;
+  box-shadow: 0px 14.17px 19.84px rgba(0, 0, 0, 0.08);
+  padding: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
 .node circle {
   cursor: pointer;
   fill: #fff;

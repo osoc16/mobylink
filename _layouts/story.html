@@ -148,4 +148,17 @@ for (var i = 0; i < links.length; i++) {
 <script src="src/js/codemirror-compressed.js"></script>
 <script src="src/js/d3.v2.min.js"></script>
 <script src="src/js/rdfa-playground.js"></script>
+<script>
+$(function(){
+  $.ajax({
+    url: 'http://95.85.15.16/parking/',
+    type: 'get',
+    error: function() {
+      $("#parkingFrame").replaceWith('<img src="src/img/fallbackimg.png" alt="fallback image" id="parkingFrame"/>');
+      $("#section9").detach();
+      $(".fallback").detach();
+    }
+  });
+});
+</script>
 {% endif %}

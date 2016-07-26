@@ -64,7 +64,7 @@ $(function() {
 
   var section3Bottom = $('#section3').offset().top + $(window).height();
   var section4Top = $('#section4').offset().top;
-  var section6Top = $('#section3').offset().top;
+  var section6Top = $('#section6').offset().top;
   var currentProgress = 0;
   var section4Top = $('#section4').offset().top;
 
@@ -73,17 +73,19 @@ $(function() {
 
     //Window scroll
     var wScroll = $(this).scrollTop();
-
+    //console.log("position: " + wScroll);
+    //console.log("Max position: " + section6Top);
     currentProgress = (wScroll / section6Top);
-    if (currentProgress < 3.4) {
+    console.log(currentProgress);
+    if (currentProgress < 0.98) {
       $('#progressBar').css({
-        'height': currentProgress * 33.33 + 'vh'
+        'height': currentProgress * 100 + 'vh'
       });
-    } else if (currentProgress > 3.4 && currentProgress < 3.5) {
+    } else if (currentProgress > 0.98 && currentProgress < 1) {
       $('#progressBar').css({
-        'height': 10 + 'vh'
+        'height': 15 + 'vh'
       });
-    } else if (currentProgress > 3.5) {
+    } else if (currentProgress > 1) {
       $('#progressBar').css({
         'height': 0
       });

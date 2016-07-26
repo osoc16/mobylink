@@ -154,7 +154,7 @@ $(function(){
     url: 'http://95.85.15.16/parking/',
     type: 'get',
     error: function() {
-      $("#parkingFrame").replaceWith('<img src="src/img/fallbackimg.png" alt="fallback image" id="parkingFrame"/>');
+      $("#parkingFrame").replaceWith('<div id="parkingFrame" class="box-content" style="overflow:auto;margin:1em"><img src="src/img/fallbackimg.png" alt="fallback image" style="width:100%"/></div>');
       $("#section9").detach();
       $(".fallback").detach();
     }

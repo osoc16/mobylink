@@ -1,1 +1,4 @@
 baseurl: /
+collections:
+  type:
+    output: true

@@ -1,0 +1,70 @@
+---
+layout: example
+---
+
+<section class="heading">
+<h2>Metadata</h2>
+{% for term in site.data.vocabulary['@graph'] %}
+  <article id="{{term["@id"] | split: ':' | last}}" class="table-container">
+    <table>
+      {% for inner in term %}
+      <tr>
+        <th>{{inner[0]}}</th>
+        <td>
+        {% if inner contains '@id' %}
+          <a href="#{{term["@id"] | split: ':' | last}}">
+        {% endif %}
+        {% if inner[1]['@language'].size > 0 %}
+          {{inner[1]['@value']}}
+        {% else %}
+          {{inner[1]}}
+        {% endif %}
+        {% if inner contains '@id' %}
+          </a>
+        {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </article>
+  {% if forloop.index == 2 %}
+    </section>
+    <h2>Terms</h2>
+    <section>
+  {% endif %}
+{% endfor %}
+</section>
+<section id="context" class="table-container">
+  <h2>Context</h2>
+  <table>
+  {% for prefix in site.data.vocabulary['@context'] %}
+  <tr>
+    <th>{{prefix[0]}}</th>
+    <td><a href="{{prefix[1]}}">{{prefix[1]}}</a></td>
+  </tr>
+  {% endfor %}
+  </table>
+</section>
+<style>
+  .heading {
+    margin: 3em 0;
+    border-bottom: 2px solid black;
+  }
+  article {
+    border-bottom: 1px solid black;
+    max-width: 100%;
+    overflow: auto;
+  }
+  article:target {
+    border: 2px solid blue;
+  }
+  table {
+    width: 100%;
+  }
+  table th {
+    width: 10em;
+  }
+  h2 {
+    margin: 1em 0;
+  }
+</style>

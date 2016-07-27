@@ -31,7 +31,7 @@ properties:
     property: longitude
     description:  Geolocation Longitude
   -
-      property: pulicationTime
+      property: publicationTime
       description:  Publication time
 ---
 
@@ -44,12 +44,11 @@ RDFa example:
   <h2 property="dtx:parkingName">Parking name</h2>
   <p property="dtx:parkingSiteAddress">Parking address</p>
   <p property="dtx:parkingLocation">Parking city</p>
-  <p property="dtx:contactDetailsTelephoneNumber">0498/ 76 54 32</p>
+  <p property="dtx:contactDetailsTelephoneNumber" content="0032497466234">0498 / 76 54 32</p>
   <p property="dtx:parkingDescription">Parking description</p>
   <p>spaces: <span property="dtx:parkingSpaceOccupied">2</span>/<span property="dtx:totalCapacity">3</span></p>
   <p>Locaton: <span property="dtx:latitude">51</span>:<span property="dtx:longitude">3</span>
-   <p property="dtx:publicationTime">07/27/2016</p>
-
+  <p property="dtx:publicationTime">07/27/2016</p>
 </article>
 ```
 
@@ -64,12 +63,12 @@ JSON-LD example:
   "dtx:parkingName": "Parking name",
   "dtx:parkingSiteAddress": "Parking address",
   "dtx:parkingLocation": "Parking city",
-  "dtx:contactDetailsTelephoneNumber": "0498/ 76 54 32",
+  "dtx:contactDetailsTelephoneNumber": "0032497466234",
   "dtx:parkingDescription": "Parking description",
   "dtx:parkingSpaceOccupied": 2,
   "dtx:totalCapacity": 3,
   "dtx:latitude": 51,
   "dtx:longitude": 3
-  "dtx:publicationTime": 07/27/2016
+  "dtx:publicationTime": 2016-07-27T17:44:07+03:00
 }
 ```

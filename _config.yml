@@ -2,4 +2,6 @@ baseurl: /
 collections:
   type:
     output: true
-    layout: type
+    permalink: /type/:path/
+    values:
+      layout: type

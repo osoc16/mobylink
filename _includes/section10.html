@@ -3,9 +3,9 @@
     <h2 class="text-margin-bottom">Implementing RDFa into HTML</h2>
     <div class="paragraphs">
       <p>The first step in adding rdfa to your existing html page is by <strong>defining the correct prefix(es)</strong>.</p>
-      <p>In our case we are adding one prefix for datexII, you do this by inserting a prefix attribute into the html tag. <code>&lt;html prefix="dtx:vocab.datex.org/terms#"&gt;</code></p>
+      <p>In our case we are adding one prefix for DATEX, you do this by inserting a prefix attribute into the html tag. <code>&lt;html prefix="dtx:vocab.datex.org/terms#"&gt;</code></p>
       <p>The next step is <strong>defining a resource </strong>(a URI which contains the relevant data that specifies the parking site). Our data is contained on the same page and thus we will use a relative link. <code>&lt;article resource="#parking"&gt;</code></p>
-      <p>Our data is a parking site, in datex this is called a <code>ParkingSite</code>. To signify this we will add <code>&lt;article resource="#parking" typeof="dtx:ParkingSite"&gt;</code>.</p>
+      <p>Our data is a parking site, in DATEX this is called a <code>ParkingSite</code>. To signify this we will add <code>&lt;article resource="#parking" typeof="dtx:ParkingSite"&gt;</code>.</p>
       <p>Data is more then a resource alone, it contains several properties. These specify the exact data that <code>#parking</code> has.</p>
       <p>To find what properties are possible we will look at our <a href="//vocab.datex.org/terms#" title="vocab">vocabulary</a> and add the properties like this for example <code>&lt;p property="dtx:parkingName"&gt;Pj's awesome parking!&lt;/p&gt;</code></p>
       <p>To make things easier for you we have searched for the correct properties in this case</p>

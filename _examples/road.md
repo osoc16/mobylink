@@ -53,15 +53,14 @@ JSON-LD example:
   "@context": {
     "dtx": "http://vocab.datex.org/terms#"
   },
-  "@type": "dtx:ParkingSite",
-  "dtx:parkingName": "Parking name",
-  "dtx:parkingSiteAddress": "Parking address",
-  "dtx:parkingLocation": "Parking city",
-  "dtx:contactDetailsTelephoneNumber": "0498/ 76 54 32",
-  "dtx:parkingDescription": "Parking description",
-  "dtx:parkingSpaceOccupied": 2,
-  "dtx:totalCapacity": 3,
-  "dtx:latitude": 51,
-  "dtx:longitude": 3
+  "@type": "dtx:Road",
+  "dtx:roadIdentifier": "E403",
+  "dtx:roadName": "Parking address",
+  "dtx:roadDestination": "Road destination",
+  "dtx:roadOrigination": "Road origination",
+  "dtx:roadSurfaceTemperature": "Road surface temperature",
+  "dtx:distanceToThisRoad": 20,
+  "dtx:roadDirection": "France",
+  "dtx:typeOfRoad": "meinRoad",
 }
 ```

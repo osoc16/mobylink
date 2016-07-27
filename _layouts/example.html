@@ -8,7 +8,9 @@ style: src/css/example.css
   <a href="..">back</a>
 {% endunless %}
 <h2>{{page.title}}</h2>
+{% if page.properties %}
 <h3>Suggested properties</h3>
+{% endif %}
 {% if page.typeof %}
 <p>type: <code>{{page.typeof}}</code></p>
 {% endif %}
@@ -32,9 +34,8 @@ style: src/css/example.css
 </table>
 </div>
 {% endif %}
+{% if page.properties %}
 <h3>Suggested usage</h3>
+{% endif %}
 {{content}}
 </main>
-
-
-

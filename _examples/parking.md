@@ -44,7 +44,7 @@ RDFa example:
   <h2 property="dtx:parkingName">Parking name</h2>
   <p property="dtx:parkingSiteAddress">Parking address</p>
   <p property="dtx:parkingLocation">Parking city</p>
-  <p property="dtx:contactDetailsTelephoneNumber" content="0032497466234">0498 / 76 54 32</p>
+  <p property="dtx:contactDetailsTelephoneNumber" content="0032497466234">0497 / 46 62 34</p>
   <p property="dtx:parkingDescription">Parking description</p>
   <p>spaces: <span property="dtx:parkingSpaceOccupied">2</span>/<span property="dtx:totalCapacity">3</span></p>
   <p>Locaton: <span property="dtx:latitude">51</span>:<span property="dtx:longitude">3</span>
@@ -68,7 +68,7 @@ JSON-LD example:
   "dtx:parkingSpaceOccupied": 2,
   "dtx:totalCapacity": 3,
   "dtx:latitude": 51,
-  "dtx:longitude": 3
-  "dtx:publicationTime": 2016-07-27T17:44:07+03:00
+  "dtx:longitude": 3,
+  "dtx:publicationTime": "2016-07-27T17:44:07+03:00"
 }
 ```

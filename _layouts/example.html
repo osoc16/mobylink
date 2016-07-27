@@ -1,0 +1,40 @@
+---
+layout: default
+style: src/css/example.css
+---
+{% include header.html %}
+<main>
+{% unless page.home %}
+  <a href="..">back</a>
+{% endunless %}
+<h2>{{page.title}}</h2>
+<h3>Suggested properties</h3>
+{% if page.typeof %}
+<p>type: <code>{{page.typeof}}</code></p>
+{% endif %}
+{% if page.properties %}
+<div class="table-container">
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for prop in page.properties %}
+    <tr>
+      <td><a href="http://vocab.datex.org/terms#{{prop.property}}"><code>{{prop.property}}</code></a></td>
+      <td>{{prop.description}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+<h3>Suggested usage</h3>
+{{content}}
+</main>
+
+
+

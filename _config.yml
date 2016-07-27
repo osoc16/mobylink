@@ -1,1 +1,5 @@
 baseurl: /
+collections:
+  examples:
+    output: true
+    permalink: /examples/:path/

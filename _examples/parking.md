@@ -30,6 +30,9 @@ properties:
   -
     property: longitude
     description:  Geolocation Longitude
+  -
+      property: pulicationTime
+      description:  Publication time
 ---
 
 This describes a parkingsite.
@@ -45,6 +48,8 @@ RDFa example:
   <p property="dtx:parkingDescription">Parking description</p>
   <p>spaces: <span property="dtx:parkingSpaceOccupied">2</span>/<span property="dtx:totalCapacity">3</span></p>
   <p>Locaton: <span property="dtx:latitude">51</span>:<span property="dtx:longitude">3</span>
+   <p property="dtx:publicationTime">07/27/2016</p>
+
 </article>
 ```
 
@@ -65,5 +70,6 @@ JSON-LD example:
   "dtx:totalCapacity": 3,
   "dtx:latitude": 51,
   "dtx:longitude": 3
+  "dtx:publicationTime": 07/27/2016
 }
 ```

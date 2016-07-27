@@ -1,19 +1,23 @@
 ---
 layout: default
-style: src/css/type.css
+style: src/css/example.css
 ---
 {% include header.html %}
 <main>
+{% unless page.home %}
+  <a href="..">back</a>
+{% endunless %}
+<h2>{{page.title}}</h2>
 {{content}}
 {% if page.properties %}
-
-{% endif %}
 <footer>
 <table>
   <thead>
-    k
+    <tr></tr>
   </thead>
 </table>
 </footer>
 </main>
+{% endif %}
+
 

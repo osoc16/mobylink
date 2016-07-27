@@ -1,4 +1,5 @@
 ---
+layout: example
 title: parking
 typeof: ParkingSite
 properties:

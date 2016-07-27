@@ -2,3 +2,4 @@ baseurl: /
 collections:
   type:
     output: true
+    layout: type

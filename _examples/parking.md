@@ -1,5 +1,5 @@
 ---
-title: parking
+title: Parking
 typeof: ParkingSite
 properties:
   -
@@ -24,10 +24,10 @@ properties:
     property: totalCapacity
     description: The maximum amount of spaces available.
   -
-    property: Latitude
+    property: latitude
     description: Geolocation Latitude
   -
-    property: Longitude
+    property: longitude
     description:  Geolocation Longitude
 ---
 

@@ -19,11 +19,14 @@
         <li>dtx:totalCapacity</li>
       </ul>
       <p>You can try this out here: </p>
+      <p style="font-size: .8em">fill in the attributes explained in the above section</p>
     </div>
   </div>
   <div id="rdfa-playground">
   <a href="http://rdfa.info/play" class="badge badge-rdfa">RDFa play</a>
   <button id="rdfa-cheat-button" class="button">cheat</button>
+  <iframe id="preview" hidden></iframe>
+  <div id="graph" style="overflow: auto;"></div>
 <script>
 document.getElementById('rdfa-cheat-button').addEventListener('click',function(){
   play.editor.setValue('<!DOCTYPE html>\n<html lang="en" prefix="dtx: http://vocab.datex.org/terms#">\n<body>\n  <article resource="#parking" typeof="dtx:ParkingSite" id="parking">\n    <h2 property="dtx:parkingName">Pj\'s awesome parking!</h2>\n    <p property="dtx:parkingSiteAddress">Maria-Hendrikaplein 1</p>\n    <p property="dtx:parkingLocation">9000 Gent</p>\n    <p property="dtx:contactDetailsTelephoneNumber">0498/ 76 43 21</p>\n    <p property="dtx:parkingDescription">This is Pj’s awesome parking space!</p>\n    <p>spaces: <span property="dtx:parkingSpaceOccupied">2</span>/<span property="dtx:totalCapacity">3</span></p>\n  </article>\n</body>\n</html>');
@@ -44,7 +47,5 @@ document.getElementById('rdfa-cheat-button').addEventListener('click',function()
 </body>
 </html>
 </textarea>
-    <iframe id="preview" hidden></iframe>
-    <div id="graph" style="overflow: auto;"></div>
   </div>
 </section>

@@ -9,6 +9,9 @@ style: src/css/example.css
 {% endunless %}
 <h2>{{page.title}}</h2>
 {{content}}
+{% if page.typeof %}
+<p>type: <code>{{page.typeof}}</code></p>
+{% endif %}
 {% if page.properties %}
 <footer>
 <table>

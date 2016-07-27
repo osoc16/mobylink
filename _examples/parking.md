@@ -1,6 +1,6 @@
 ---
 layout: example
-title: parking
+title: Parking
 typeof: ParkingSite
 properties:
   -

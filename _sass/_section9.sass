@@ -2,6 +2,15 @@
   padding-top: 80px
   height: auto
 
+  .arrow-right
+    margin: .2em
+
+    &:after
+      margin: .2em
+      content: '👉'
+      @media (max-width: 1063px)
+        content: '👇'
+
   #json-source
     background: $highlight-bg
     color: $secondary-text
@@ -100,6 +109,9 @@
 
       @media (max-width: 1024px)
         flex: 0 0 100%
+
+    h3
+      margin: .5em 0
 
 @keyframes buzz-left-right
   0%

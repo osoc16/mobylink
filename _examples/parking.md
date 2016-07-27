@@ -1,5 +1,4 @@
 ---
-layout: type
 title: parking
 typeof: ParkingSite
 properties:

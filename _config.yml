@@ -1,7 +1,7 @@
 baseurl: /
 collections:
-  type:
+  examples:
     output: true
-    permalink: /type/:path/
+    permalink: /examples/:path/
     values:
-      layout: type
+      layout: example

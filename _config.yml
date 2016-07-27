@@ -3,5 +3,3 @@ collections:
   examples:
     output: true
     permalink: /examples/:path/
-    values:
-      layout: example

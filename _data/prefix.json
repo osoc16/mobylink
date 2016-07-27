@@ -1,0 +1,57 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "datex": "http://vocab.datex.org/terms#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "vann": "http://purl.org/vocab/vann/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "td": "http://purl.org/td/transportdisruption#",
+    "cc": "http://creativecommons.org/ns#",
+    "status": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "schema": "http://schema.org/"
+  },
+  "@graph": [{
+    "@id": "http://vocab.datex.org/terms",
+    "cc:license": "http://creativecommons.org/licenses/by/3.0/",
+    "dct:hasFormat": "http://vocab.datex.org/vocabulary.jsonld",
+    "dct:issued": {
+      "@value": "2016-05-23",
+      "@type": "xsd:date"
+    },
+    "dct:modified": {
+      "@value": "2016-07-28",
+      "@type": "xsd:date"
+    },
+    "dct:rights": "Copyright 2016 - Open Transport contributors",
+    "@type": "foaf:Document",
+    "foaf:primaryTopic": "datex:Ontology"
+  }, {
+    "@id": "datex:Ontology",
+    "dct:title": {
+      "@value": "Datex2",
+      "@language": "en"
+    },
+    "@type": "owl:Ontology",
+    "rdfs:comment": {
+      "@value": "A mapping of Datex2 to a Linked Data vocabulary",
+      "@language": "en"
+    },
+    "dct:description": {
+      "@value": "This document gives URIs to all terms used within Datex II",
+      "@language": "en"
+    },
+    "dct:creator": ["http://pieter.pm/#me", "https://people.epfl.ch/prodromos.kolyvakis"],
+    "vann:preferredNamespacePrefix": "datex",
+    "vann:preferredNamespaceUri": "http://vocab.datex.org/terms#",
+    "@type": "owl:Ontology",
+    "rdfs:label": {
+      "@value": "Linked Datex II",
+      "@language": "en"
+    },
+    "rdfs:seeAlso": "http://datex2.eu/schema/2/2_0"
+  }]
+}

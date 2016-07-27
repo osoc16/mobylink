@@ -1,6 +1,6 @@
 ---
 layout: example
-title: road
+title: Road
 typeof: Road
 properties:
   -

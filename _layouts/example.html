@@ -24,7 +24,7 @@ style: src/css/example.css
   <tbody>
     {% for prop in page.properties %}
     <tr>
-      <td><code>{{prop.property}}</code></td>
+      <td><a href="http://vocab.datex.org/terms#{{prop.property}}"><code>{{prop.property}}</code></a></td>
       <td>{{prop.description}}</td>
     </tr>
     {% endfor %}

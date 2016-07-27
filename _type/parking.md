@@ -1,6 +1,7 @@
 ---
 layout: type
 title: parking
+typeof: ParkingSite
 properties:
   -
     property: parkingName
@@ -31,7 +32,7 @@ properties:
     description:  Geolocation Longitude
 ---
 
-This describes a parkingsite. 
+This describes a parkingsite.
 
 RDFa example:
 

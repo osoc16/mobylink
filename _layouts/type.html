@@ -3,7 +3,11 @@ layout: default
 style: src/css/type.css
 ---
 {% include header.html %}
-<main>{{content}}</main>
+<main>
+{{content}}
+{% if page.properties %}
+
+{% endif %}
 <footer>
 <table>
   <thead>
@@ -11,3 +15,5 @@ style: src/css/type.css
   </thead>
 </table>
 </footer>
+</main>
+

@@ -31,14 +31,18 @@ layout: example
           {{inner[1]['@value']}}
         {% else %}
           {% if inner[1] contains ':' %}
-          {% for abbr in {{site.data.vocabulary['@context']}} %}
-            {% assign curr_prefix = inner[1] | split: ':' | first %}
-            {% assign curr_value = inner[1] | split: ':' | last %}
-            {% if curr_prefix contains abbr[0] %}
-              <a href="{{abbr[1]}}{{curr_value}}" title="{{curr_prefix}}">
-              {% break %}
-            {% endif %}
-          {% endfor %}
+          {% assign curr_prefix = inner[1] | split: ':' | first %}
+          {% assign curr_value = inner[1] | split: ':' | last %}
+          {% if curr_prefix contains 'http' %}
+            <a href="{{inner[1]}}">
+          {% else %}
+            {% for abbr in {{site.data.vocabulary['@context']}} %}
+              {% if curr_prefix contains abbr[0] %}
+                <a href="{{abbr[1]}}{{curr_value}}" title="{{curr_prefix}}">
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
           {% endif %}
           {{inner[1] | join: ' '}}
           {% if inner[1] contains ':' %}
@@ -91,4 +95,3 @@ layout: example
     margin: 1em 0;
   }
 </style>
-{% include footer.html %}

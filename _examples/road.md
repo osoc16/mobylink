@@ -61,6 +61,6 @@ JSON-LD example:
   "dtx:roadSurfaceTemperature": "Road surface temperature",
   "dtx:distanceToThisRoad": 20,
   "dtx:roadDirection": "France",
-  "dtx:typeOfRoad": "meinRoad",
+  "dtx:typeOfRoad": "mainRoad"
 }
 ```

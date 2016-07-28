@@ -54,6 +54,7 @@ JSON-LD example:
     "dtx": "http://vocab.datex.org/terms#"
   },
   "@type": "dtx:Road",
+  "@id": "#road",
   "dtx:roadIdentifier": "E403",
   "dtx:roadName": "Parking address",
   "dtx:roadDestination": "Road destination",

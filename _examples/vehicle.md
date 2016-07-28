@@ -75,6 +75,6 @@ JSON-LD example:
   "dtx:vehicleStatus": "onFire",
   "dtx:vehicleCharacteristics": "Has a tuning is not a crime sticker",
   "dtx:axleSpacingOnVehicle": "2.0",
-  "dtx:specificAxleWeight": "1.2",
+  "dtx:specificAxleWeight": "1.2"
 }
 ```

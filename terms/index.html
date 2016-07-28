@@ -27,7 +27,7 @@ layout: example
           {% endif %}
         </th>
         <td>
-        {% if inner[1]['@language'].size > 0 %}
+        {% if inner[1]['@language'].size > 0 or inner[1]['@type'].size > 0 %}
           {{inner[1]['@value']}}
         {% else %}
           {% if inner[1] contains ':' %}

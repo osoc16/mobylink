@@ -60,6 +60,7 @@ JSON-LD example:
     "dtx": "http://vocab.datex.org/terms#"
   },
   "@type": "dtx:ParkingSite",
+  "@id": "#parking",
   "dtx:parkingName": "Parking name",
   "dtx:parkingSiteAddress": "Parking address",
   "dtx:parkingLocation": "Parking city",

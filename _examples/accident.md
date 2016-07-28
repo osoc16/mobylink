@@ -36,6 +36,7 @@ JSON-LD example:
     "dtx": "http://vocab.datex.org/terms#"
   },
   "@type": "dtx:Accident",
+  "@id": "#accident",
   "dtx:accidentType": "collision",
   "dtx:accidentCause": "rubberNecking",
   "dtx:vehicleInvolved": {

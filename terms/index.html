@@ -3,24 +3,47 @@ layout: example
 ---
 
 <section class="heading">
+<p>This is the page of all the terms available in linked DATEX. If you want to use it, set a prefix of <code>http://vocab.datex.org/terms/#</code>. You can contribute to this ontology on <a href="https://github.com/oSoc16/mobylink/blob/gh-pages/_data/vocabulary.json">GitHub</a>.</p>
 <h2>Metadata</h2>
 {% for term in site.data.vocabulary['@graph'] %}
   <article id="{{term["@id"] | split: ':' | last}}" class="table-container">
     <table>
       {% for inner in term %}
       <tr>
-        <th>{{inner[0]}}</th>
+        <th>
+          {% if inner[0] contains ':' %}
+          {% for abbr in {{site.data.vocabulary['@context']}} %}
+            {% assign curr_prefix = inner[0] | split: ':' | first %}
+            {% assign curr_value = inner[0] | split: ':' | last %}
+            {% if curr_prefix contains abbr[0] %}
+              <a href="{{abbr[1]}}{{curr_value}}" title="{{curr_prefix}}">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+          {{inner[0]}}
+          {% if inner[0] contains ':' %}
+            </a>
+          {% endif %}
+        </th>
         <td>
-        {% if inner contains '@id' %}
-          <a href="#{{term["@id"] | split: ':' | last}}">
-        {% endif %}
         {% if inner[1]['@language'].size > 0 %}
           {{inner[1]['@value']}}
         {% else %}
-          {{inner[1]}}
-        {% endif %}
-        {% if inner contains '@id' %}
-          </a>
+          {% if inner[1] contains ':' %}
+          {% for abbr in {{site.data.vocabulary['@context']}} %}
+            {% assign curr_prefix = inner[1] | split: ':' | first %}
+            {% assign curr_value = inner[1] | split: ':' | last %}
+            {% if curr_prefix contains abbr[0] %}
+              <a href="{{abbr[1]}}{{curr_value}}" title="{{curr_prefix}}">
+              {% break %}
+            {% endif %}
+          {% endfor %}
+          {% endif %}
+          {{inner[1] | join: ' '}}
+          {% if inner[1] contains ':' %}
+            </a>
+          {% endif %}
         {% endif %}
         </td>
       </tr>

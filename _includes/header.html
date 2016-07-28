@@ -3,9 +3,9 @@
     <ul>
       <li><a {% if page.index %}class="active"{% endif %} href="{{site.baseurl}}">Home</a></li>
       <li><a href="{{site.baseurl}}#footer">About us</a></li>
-      <li><a {% if page.url contains 'tools' %}class="active"{% endif %}href="{{site.baseurl}}tools">Tools</a></li>
-      <li><a href="http://vocab.datex.org/terms#">Vocabulary</a></li>
-      <li><a {% if page.layout == 'example' %}class="active"{% endif %} href="{{site.baseurl}}examples">For developers</a></li>
+      <li><a {% if page.url contains 'tools' %} class="active" {% endif %} href="{{site.baseurl}}tools">Tools</a></li>
+      <li><a {% if page.url contains 'terms' %} class="active" {% endif %} href="{{site.baseurl}}terms#">Vocabulary</a></li>
+      <li><a {% if page.url contains 'example' %} class="active" {% endif %} href="{{site.baseurl}}examples">For developers</a></li>
     </ul>
   </nav>
 </header>

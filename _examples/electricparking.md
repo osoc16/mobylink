@@ -38,10 +38,10 @@ RDFa example:
   <h2 property="dtx:parkingName">Parking name</h2>
   <p property="dtx:parkingSiteAddress">Parking address</p>
   <p property="dtx:parkingLocation">Parking city</p>
-  <div resource="www.parkingsiteX.org/electriccarparking" typeof= "dtx:electricCharging" property="dtx:electricCharging">
+  <div resource="www.parkingsiteX.org/electriccarparking" typeof="dtx:electricCharging" property="dtx:electricCharging">
         <p property="dtx:chargingStationConnectorType" > SAE J1772 </p>
-        <p property="dtx:chargingStationModelType" >?</p>
-        <p property="dtx:chargingStationUsageType" >?</p>
+        <p property="dtx:chargingStationModelType" >SAE J1772-2009</p>
+        <p property="dtx:chargingStationUsageType" >electricVehicle</p>
         <p property="dtx:numberOfChargingPoints" >2</p>
     </div>
   <p property="dtx:publicationTime">07/27/2016</p>
@@ -67,9 +67,9 @@ JSON-LD example:
       {
         "@id": "www.parkingsiteX.org/electriccarparking",
         "@type": "dtx:electricCharging",
-        "dtx:chargingStationConnectorType": "?",
-        "dtx:chargingStationModelType": "?",
-        "dtx:chargingStationUsageType": "?",
+        "dtx:chargingStationConnectorType": "SAE J1772",
+        "dtx:chargingStationModelType": "SAE J1772-2009",
+        "dtx:chargingStationUsageType": "electricVehicle",
         "dtx:numberOfChargingPoints": 2
       }
     ]

@@ -23,6 +23,7 @@ function shuffle(array) {
 var tags = [
   '<span class="tag full">"@context": {<br>  "dtx": "https://vocab.datex.org/terms#"<br>},</span>',
   '<span class="tag full">"@type": "dtx:parkingSite",</span>',
+  '<span class="tag full">"@id": "#parking",</span>',
   '<span class="tag">dtx:parkingName</span>',
   '<span class="tag">dtx:parkingSiteAddress</span>',
   '<span class="tag">dtx:parkingLocation</span>',

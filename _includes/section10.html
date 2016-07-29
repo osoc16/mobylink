@@ -49,7 +49,19 @@ document.getElementById('rdfa-cheat-button').addEventListener('click',function()
 </textarea>
 <script>
 setTimeout(function(){
-  play.editor.setValue('<!DOCTYPE html>\n<html lang="en">\n<body>\n\s\s<article id="parking">\n    <h2>Pj\'s awesome parking!</h2>\n\s\s\s\s<p>Maria-Hendrikaplein 1</p>\n\s\s\s\s<p>9000 Gent</p>\n\s\s\s\s<p>0498/ 76 43 21</p>\n\s\s\s\s<p>This is Pj’s awesome parking space!</p>\n\s\s\s\s<p>spaces: <span>2</span>/<span>3</span></p>\n\s\s</article>\n</body>\n</html>\n');
+  play.editor.setValue(`<!DOCTYPE html>
+<html lang="en">
+<body>
+  <article id="parking">
+    <h2>Pj's awesome parking!</h2>
+    <p>Maria-Hendrikaplein 1</p>
+    <p>9000 Gent</p>
+    <p>0498/ 76 43 21</p>
+    <p>This is Pj’s awesome parking space!</p>
+    <p>spaces: <span>2</span>/<span>3</span></p>
+  </article>
+</body>
+</html>`);
 },1000);
 </script>
   </div>

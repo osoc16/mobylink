@@ -12,7 +12,31 @@
     "td": "http://purl.org/td/transportdisruption#",
     "cc": "http://creativecommons.org/ns#",
     "status": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
-    "schema": "http://schema.org/"
+    "schema": "http://schema.org/",
+    "rdfs:subClassOf": {
+      "@type": "@id"
+    },
+    "rdfs:seeAlso": {
+      "@type": "@id"
+    },
+    "rdfs:range": {
+      "@type": "@id"
+    },
+    "cc:license": {
+      "@type": "@id"
+    },
+    "dcterms:hasFormat": {
+      "@type": "@id"
+    },
+    "foaf:primaryTopic": {
+      "@type": "@id"
+    },
+    "owl:sameAs": {
+      "@type": "@id"
+    },
+    "rdfs:subClassOf": {
+      "@type": "@id"
+    }
   },
   "@graph": [{
     "@id": "http://vocab.datex.org/terms",

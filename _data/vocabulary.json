@@ -13,7 +13,7 @@
     "cc": "http://creativecommons.org/ns#",
     "status": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
     "schema": "http://schema.org/",
-"rdfs:subClassOf": {
+    "rdfs:subClassOf": {
       "@type": "@id"
     },
     "rdfs:seeAlso": {

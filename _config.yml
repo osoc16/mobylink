@@ -1,4 +1,3 @@
-baseurl: /
 collections:
   examples:
     output: true
